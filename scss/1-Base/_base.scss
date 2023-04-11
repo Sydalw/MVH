@@ -1,0 +1,46 @@
+@import "../2-Utils/variables";
+
+html {
+    font-size: $taille_police;
+    font-family: 'Helvetica Neue', 'Comfortaa';
+    height: 1vh;
+}
+
+body {
+    background-color: var(--body-bg);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1 {
+    color: var(--h1-color);
+    font-size: clamp(4.5rem, 6vw, 10rem);
+}
+
+h2 {
+    font-size: clamp(2.5rem, 3.5vw, 4.5rem);
+    color: var(--h2-color);
+}
+
+h3 {
+    font-size: clamp(2rem, 2.5vw, 3.5rem);
+    color: var(--h3-color);
+}
+
+h4 {
+    font-size: clamp(1.8rem, 1.5vw, 2.7rem);
+    color: var(--h4-color);
+}
+
+h5 {
+    font-size: clamp(1.6rem, 1.3vw, 2.5rem);
+    color: var(--h4-color);
+}
+
+p {
+    font-size: clamp(1.3rem, 1.4vw, 1.6rem);
+    color: var(--p-color);
+}

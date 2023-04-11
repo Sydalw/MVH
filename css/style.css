@@ -1,0 +1,469 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+
+/*
+  3. Allow percentage-based heights in the application
+*/
+html, body {
+  height: 100%;
+}
+
+/*
+  Typographic tweaks!
+  4. Add accessible line-height
+  5. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*
+  6. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+  7. Remove built-in form typography styles
+*/
+input, button, textarea, select {
+  font: inherit;
+}
+
+/*
+  8. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+/*
+  9. Create a root stacking context
+*/
+#root, #__next {
+  isolation: isolate;
+}
+
+:root {
+  --nav-bg: #fff;
+  --body-bg: #fff;
+  --nav-font-color:#1D1D1B;
+  --h1-color: #1D1D1B;
+  --h2-color:#1D1D1B;
+  --h3-color:#1D1D1B;
+  --h4-color:#1D1D1B;
+  --p-color: #1D1D1B;
+  --border-color:#F2D7BF;
+  --p-spanned-color: #84AA86;
+  --accentuated-color:#E62C33;
+  --very-accentuated-color: #E62C33;
+  --letter-spacing: 0;
+  --hover-title-color:#84AA86;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --nav-bg: #fff;
+    --body-bg: #fff;
+    --nav-font-color:#1D1D1B;
+    --border-color:#F2D7BF;
+    --h1-color:#1D1D1B;
+    --h2-color:#1D1D1B;
+    --h3-color:#1D1D1B;
+    --h4-color:#1D1D1B;
+    --p-color: #1D1D1B;
+    --p-spanned-color: #84AA86;
+    --accentuated-color: #E62C33;
+    --very-accentuated-color: #E62C33;
+    --letter-spacing: 0.1;
+    --hover-title-color:#84AA86;
+  }
+}
+:root {
+  --nav-bg: #fff;
+  --body-bg: #fff;
+  --nav-font-color:#1D1D1B;
+  --h1-color: #1D1D1B;
+  --h2-color:#1D1D1B;
+  --h3-color:#1D1D1B;
+  --h4-color:#1D1D1B;
+  --p-color: #1D1D1B;
+  --border-color:#F2D7BF;
+  --p-spanned-color: #84AA86;
+  --accentuated-color:#E62C33;
+  --very-accentuated-color: #E62C33;
+  --letter-spacing: 0;
+  --hover-title-color:#84AA86;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --nav-bg: #fff;
+    --body-bg: #fff;
+    --nav-font-color:#1D1D1B;
+    --border-color:#F2D7BF;
+    --h1-color:#1D1D1B;
+    --h2-color:#1D1D1B;
+    --h3-color:#1D1D1B;
+    --h4-color:#1D1D1B;
+    --p-color: #1D1D1B;
+    --p-spanned-color: #84AA86;
+    --accentuated-color: #E62C33;
+    --very-accentuated-color: #E62C33;
+    --letter-spacing: 0.1;
+    --hover-title-color:#84AA86;
+  }
+}
+html {
+  font-size: 62.5%;
+  font-family: "Helvetica Neue", "Comfortaa";
+  height: 1vh;
+}
+
+body {
+  background-color: var(--body-bg);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1 {
+  color: var(--h1-color);
+  font-size: clamp(4.5rem, 6vw, 10rem);
+}
+
+h2 {
+  font-size: clamp(2.5rem, 3.5vw, 4.5rem);
+  color: var(--h2-color);
+}
+
+h3 {
+  font-size: clamp(2rem, 2.5vw, 3.5rem);
+  color: var(--h3-color);
+}
+
+h4 {
+  font-size: clamp(1.8rem, 1.5vw, 2.7rem);
+  color: var(--h4-color);
+}
+
+h5 {
+  font-size: clamp(1.6rem, 1.3vw, 2.5rem);
+  color: var(--h4-color);
+}
+
+p {
+  font-size: clamp(1.3rem, 1.4vw, 1.6rem);
+  color: var(--p-color);
+}
+
+.top-bar {
+  height: 3rem;
+  margin: 0 auto;
+  line-height: 3rem;
+  color: var(--p-color);
+  background-color: var(--border-color);
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+  z-index: 200;
+  border-bottom: 1px solid var(--border-color);
+}
+.top-bar a {
+  margin: 0 1rem;
+}
+.top-bar a:hover {
+  color: var(--p-spanned-color);
+}
+
+.box-sizer {
+  width: 108rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.banner {
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), url("./../../ressources/images/magalie Villora2.jpg");
+  height: 86rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.banner h5 {
+  text-align: center;
+  color: var(--nav-bg);
+  text-transform: uppercase;
+}
+
+h1 {
+  text-align: center;
+  color: var(--nav-bg);
+}
+
+footer {
+  background-color: var(--nav-bg);
+}
+
+.bottom-bar {
+  height: 5rem;
+  width: 100%;
+  margin: 5rem auto 0;
+  line-height: 5rem;
+  color: var(--nav-font-color);
+  background-color: var(--border-color);
+  font-size: 1.2rem;
+  display: flex;
+  z-index: 200;
+  justify-content: center;
+  border-top: 1px solid var(--border-color);
+}
+.bottom-bar a {
+  margin: 0 1rem;
+}
+.bottom-bar a:hover {
+  color: var(--p-spanned-color);
+}
+
+nav {
+  background-color: var(--nav-bg);
+  height: 10rem;
+  width: 100%;
+  font-size: clamp(1rem, 1.6em, 2rem);
+  font-weight: 700;
+  position: sticky;
+  top: 0px;
+  z-index: 1000;
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  justify-content: center;
+}
+nav img {
+  height: 100%;
+  position: absolute;
+}
+nav ul {
+  width: 100%;
+  height: 100%;
+  line-height: 10rem;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--nav-font-color);
+}
+@media screen and (max-width: 65rem) {
+  nav ul {
+    display: block;
+    position: relative;
+    top: -43rem;
+    transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+    z-index: -10;
+  }
+}
+nav ul li {
+  display: inline-block;
+  list-style-type: none;
+  transition: all 0.2s ease-in-out;
+}
+nav ul li:hover {
+  cursor: pointer;
+  border-bottom: 0.5rem solid var(--p-spanned-color);
+  color: var(--p-spanned-color);
+}
+@media screen and (max-width: 65rem) {
+  nav ul li {
+    line-height: 10rem;
+    display: block;
+    margin-left: -4rem;
+    background-color: var(--nav-bg);
+  }
+  nav ul li:hover {
+    background-color: var(--accentuated-color);
+    color: var(--p-spanned-color);
+    border-bottom: 0;
+  }
+}
+nav ul li a {
+  padding: 2rem;
+}
+
+.navigationCheckbox {
+  display: none;
+}
+
+.navigationBtn {
+  background-color: transparent;
+  height: 7rem;
+  width: 7rem;
+  position: absolute;
+  top: 3.4rem;
+  right: 2.5rem;
+  z-index: 100;
+  text-align: center;
+  cursor: pointer;
+  display: none;
+}
+@media (max-width: 65rem) {
+  .navigationBtn {
+    display: block;
+  }
+}
+
+.navigationIcon {
+  position: relative;
+  margin-top: 1.5rem;
+  width: 5rem;
+  height: 0.5rem;
+  background-color: var(--nav-font-color);
+  border-radius: 0.25rem;
+  display: none;
+}
+@media (max-width: 65rem) {
+  .navigationIcon {
+    display: inline-block;
+  }
+}
+
+.navigationIcon::before,
+.navigationIcon::after {
+  width: 5rem;
+  height: 0.5rem;
+  border-radius: 0.25rem;
+  background-color: var(--nav-font-color);
+  display: inline-block;
+  content: "";
+  position: absolute;
+  left: 0;
+  transition: all 0.2s;
+  display: none;
+}
+@media (max-width: 65rem) {
+  .navigationIcon::before,
+.navigationIcon::after {
+    display: block;
+  }
+}
+
+.navigationIcon::before {
+  top: -1.5rem;
+  display: none;
+}
+@media (max-width: 65rem) {
+  .navigationIcon::before {
+    display: block;
+  }
+}
+
+.navigationIcon::after {
+  top: 1.5rem;
+  display: none;
+}
+@media (max-width: 65rem) {
+  .navigationIcon::after {
+    display: block;
+  }
+}
+
+.navigationCheckbox:checked ~ .list-nav {
+  display: block;
+  transform: translateY(53rem);
+}
+@media screen and (min-width: 65rem) {
+  .navigationCheckbox:checked ~ .list-nav {
+    transform: translateY(0rem);
+  }
+}
+
+.navigationCheckbox:checked ~ .nav {
+  opacity: 1;
+  width: 100%;
+}
+
+.navigationCheckbox:checked + .navigationBtn .navigationIcon {
+  background-color: transparent;
+}
+
+.navigationCheckbox:checked + .navigationBtn .navigationIcon::before {
+  top: 0;
+  transform: rotate(135deg);
+}
+
+.navigationCheckbox:checked + .navigationBtn .navigationIcon::after {
+  top: 0;
+  transform: rotate(-135deg);
+}
+
+section {
+  height: 50rem;
+}
+section .section-container {
+  width: 108rem;
+  margin: 0 auto;
+}
+section .section-content {
+  display: flex;
+  flex-direction: row;
+}
+
+.formulaire {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.formulaire input {
+  margin: 2rem 0;
+}
+.formulaire input[type=text] {
+  height: 5rem;
+  padding-left: 1rem;
+}
+.formulaire input[type=text]:focus {
+  outline: none;
+  border: 3px solid var(--p-spanned-color);
+}
+@media screen and (max-width: 65rem) {
+  .formulaire input[type=text] {
+    margin: 2rem 5rem;
+  }
+}
+.formulaire input[type=submit] {
+  border: none;
+  margin: 0 auto;
+}
+.formulaire textarea {
+  margin: 2rem 0;
+  height: 20rem;
+  outline: none;
+  padding: 1rem 0 0 1rem;
+}
+.formulaire textarea::placeholder {
+  font-family: "Helvetica Neue", "Comfortaa";
+}
+.formulaire textarea:focus {
+  outline: none;
+  border: 3px solid var(--p-spanned-color);
+}
+@media screen and (max-width: 65rem) {
+  .formulaire textarea {
+    margin: 2rem 5rem;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

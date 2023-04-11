@@ -1,0 +1,46 @@
+.formulaire {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    input {
+        margin: 2rem 0;
+        
+        &[type="text"] {
+            height: 5rem;
+            padding-left: 1rem;
+
+            &:focus {
+                outline: none;
+                border: 3px solid var(--p-spanned-color);
+            }
+
+            @media screen and (max-width: 65rem) {
+                margin: 2rem 5rem;
+            }
+        }
+
+        &[type="submit"] {
+            border: none;
+            margin:0 auto;
+        }
+    }
+
+    textarea {
+        margin: 2rem 0;
+        height: 20rem;
+        outline: none;
+        padding: 1rem 0 0 1rem;
+
+        &::placeholder {
+            font-family: 'Helvetica Neue', 'Comfortaa';
+        } 
+        &:focus {
+            outline: none;
+            border: 3px solid var(--p-spanned-color);
+        }
+        @media screen and (max-width: 65rem) {
+            margin: 2rem 5rem;
+        }
+    }
+}

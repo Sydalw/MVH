@@ -1,0 +1,49 @@
+.top-bar {
+    height: 3rem;
+    margin: 0 auto;
+    line-height: 3rem;
+    color: var(--p-color);
+    background-color: var(--border-color);
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    z-index: 200;
+    border-bottom: 1px solid var(--border-color);
+    
+    a {
+        margin: 0 1rem;
+
+        &:hover {
+            color: var(--p-spanned-color);
+        }
+    }
+}
+
+.box-sizer {
+    width: 108rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.banner {
+    background-image: linear-gradient(0deg,rgba(0,0,0,.15),rgba(0,0,0,.15)),url("./../../ressources/images/magalie\ Villora2.jpg");
+    height:86rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    h5 {
+        text-align: center;
+        color: var(--nav-bg);
+        text-transform: uppercase;
+
+    }
+}
+
+h1 {
+    text-align: center;
+    color: var(--nav-bg);
+}

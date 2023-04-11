@@ -1,0 +1,99 @@
+.navigationCheckbox {
+    display: none;
+}
+
+.navigationBtn {
+    background-color: transparent;
+    height: 7rem;
+    width: 7rem;
+    position: absolute;
+    top: 3.4rem;
+    right: 2.5rem;
+    z-index: 100;
+    text-align: center;
+    cursor: pointer;
+    display: none;
+
+    @media (max-width: 65rem) {
+        display: block;
+    }
+}
+
+.navigationIcon {
+    position: relative;
+    margin-top: 1.5rem;
+    width: 5rem;
+    height: 0.5rem;
+    background-color: var(--nav-font-color);
+    border-radius: 0.25rem;
+    display: none;
+
+    @media (max-width: 65rem) {
+        display: inline-block;
+    }
+}
+
+.navigationIcon::before,
+.navigationIcon::after {
+    width: 5rem;
+    height: 0.5rem;
+    border-radius: 0.25rem;
+    background-color: var(--nav-font-color);
+    display: inline-block;
+    content: "";
+    position: absolute;
+    left: 0;
+    transition: all .2s;
+    display: none;
+
+    @media (max-width: 65rem) {
+        display: block;
+    }
+}
+
+.navigationIcon::before {
+    top: -1.5rem;
+    display: none;
+
+    @media (max-width: 65rem) {
+        display: block;
+    }
+}
+
+.navigationIcon::after {
+    top: 1.5rem;
+    display: none;
+
+    @media (max-width: 65rem) {
+        display: block;
+    }
+}
+
+.navigationCheckbox:checked~.list-nav {
+    display: block;
+    transform: translateY(53rem);
+
+    @media screen and (min-width: 65rem) {
+        transform: translateY(0rem);
+
+    }
+}
+
+.navigationCheckbox:checked~.nav {
+    opacity: 1;
+    width: 100%;
+}
+
+.navigationCheckbox:checked+.navigationBtn .navigationIcon {
+    background-color: transparent;
+}
+
+.navigationCheckbox:checked+.navigationBtn .navigationIcon::before {
+    top: 0;
+    transform: rotate(135deg);
+}
+
+.navigationCheckbox:checked+.navigationBtn .navigationIcon::after {
+    top: 0;
+    transform: rotate(-135deg);
+}

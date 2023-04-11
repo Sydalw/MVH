@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magalie VILLORA Hypnose</title>
+    <link rel="icon" type="image/svg" href="" />
+    <link href="./css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script defer src="https://unpkg.com/alpinejs@3.10.5/dist/cdn.min.js"></script>
+</head>
+<body>
+    <div class="top-bar">
+        <div class="box-sizer">
+            <div>
+                <a href=""><i class="fa-brands fa-skype"></i></a>
+                <a href=""><i class="fa-brands fa-instagram"></i></a>
+                <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+                <a href=""><i class="fa-brands fa-github"></i></a>
+            </div>
+            <div>
+                <a href="mailto=magalie.villora@wanadoo.fr"><i class="fa-sharp fa-solid fa-envelope"></i> magalie.villora@wanadoo.fr</a>
+                <a href="tel=0666356699"><i class="fa-solid fa-phone"></i> 06.66.35.66.99</a>
+            </div>
+        </div>
+    </div>
+    <nav>
+        <div class="box-sizer">
+            <a href="./index.html">
+                <img src="./ressources/images/IMG_2783.JPG">
+            </a>
+            <input type="checkbox" class="navigationCheckbox" id="navi">
+            <label for="navi" class="navigationBtn">
+                <span class="navigationIcon">&nbsp;</span>
+            </label>
+            <ul class="list-nav">
+                <li><a href="#qui_suis_je">Qui suis-je</a></li>
+                <li><a href="#services">Mes services</a></li>
+                <li><a href="#tarifs">Tarifs</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <header>
+        <div class="banner">
+            <h5 class="">Magalie VILLORA</h5>
+            <h1 class="">Hypnose<br>à Mont de Marsan</h1>
+        </div>
+    </header>
+    <main>
+        <section id="" class="">
+            <div class="section-container">
+                <div class="section-header">
+                    <h5 class="">Les thématiques que j'accompagne</h5>
+                    <h2 class=""> Pour vous aider à vous sentir vous même</h2>
+                </div>
+                <div class="section-content">
+                    <div class="card">
+                        <span class=""><img src="file:///Users/Wladys/Documents/Nicepage%20Templates/Site2/images/3057304-4ff4facd.png" alt=""></span>
+                        <h5 class="">Difficultés relationnelles</h5>
+                        <p class="">Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
+                    </div>
+                    <div class="">
+                        <span class=""><img src="file:///Users/Wladys/Documents/Nicepage%20Templates/Site2/images/1996976-7f80a2f8.png" alt=""></span>
+                        <h5 class="">Troubles anxieux</h5>
+                        <p class="">Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
+                    </div>
+                    <div class="">
+                        <span class=""><img src="file:///Users/Wladys/Documents/Nicepage%20Templates/Site2/images/823885-9556898b.png" alt=""></span>
+                        <h5 class="">Phobies</h5>
+                        <p class="">Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
+                    </div>
+                    <div class="">
+                        <span class=""><img src="file:///Users/Wladys/Documents/Nicepage%20Templates/Site2/images/2444875-8d5ec4bb.png" alt=""></span>
+                        <h5 class="">Troubles de l'alimentation</h5>
+                        <p class="">Sample text. Click to select the text box. Click again or double click to start editing the text.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="contact">
+            <div class="section-container">
+                <div>
+
+                </div>
+                <div class="formulaire_formContainer">
+                    <form action="https://postmail.invotes.com/send" method="post" id="email_form" class="formulaire">
+
+                        <!-- <input type="text" name="subject" placeholder="Titre de votre message*" required="required" /> -->
+                        <input type="hidden" name="access_token" value="9q5q9g54si05i7na3mm8074h" />
+                          <!-- return urls can be fully qualified -OR-
+                            start with / for root relative -OR-
+                            start with . for url relative --> 
+                        <!--<input type="hidden" name="success_url" value=".?message=Email+Successfully+Sent%21&isError=0" />
+                        <input type="hidden" name="error_url" value=".?message=Email+could+not+be+sent.&isError=1" />-->
+                        
+                        <input type="hidden" name="success_url" value="http://127.0.0.1:5500/Reworked/index.html" />
+                        <input type="hidden" name="error_url" value="http://127.0.0.1:5500/Reworked/index.html" />
+      
+                        <input type="text" name="extra_name" placeholder="Votre nom*" required="required"/>
+                        <!-- set the reply-to address -->
+                        <input type="text" name="reply_to" placeholder="Votre email*" required="required"/>
+      
+                        <!-- to append extra fields, use the extra_ prefix.
+                            Entries will be appended to your message body. -->
+                        <input type="text" name="extra_phone_number" placeholder="Votre téléphone" />
+      
+                        <!-- to split your message into 160 chars
+                            for an sms gateway -->
+                        <!-- <input type="hidden"
+                                    name="sms_format" value="true" /> -->
+      
+                        <textarea name="text" placeholder="Message*" required="required"></textarea>
+                      
+                        <input class="submit_form button" id="submit_form" type="submit" value="Envoyer">
+                        </input>
+                        <!-- not required, but we'd appreciate it if you'd link to us somewhere on your site -->
+                      </form>
+                </div>
+            </div>
+        </section>
+       
+    </main>
+    <footer>
+        <div class="bottom-bar">
+            <div class="box-sizer">
+                <div>
+                    <a href=""><i class="fa-brands fa-skype"></i></a>
+                    <a href=""><i class="fa-brands fa-instagram"></i></a>
+                    <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href=""><i class="fa-brands fa-github"></i></a>
+                </div>
+                <div>
+                    <a href="mailto=magalie.villora@wanadoo.fr"><i class="fa-sharp fa-solid fa-envelope"></i> magalie.villora@wanadoo.fr</a>
+                    <a href="tel=0666356699"><i class="fa-solid fa-phone"></i> 06.66.35.66.99</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="./js/app.js"></script>
+</body>
+</html>

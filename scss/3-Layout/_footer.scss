@@ -1,0 +1,25 @@
+footer {
+    background-color: var(--nav-bg);
+}
+
+.bottom-bar {
+    height: 5rem;
+    width: 100%;
+    margin: 5rem auto 0;
+    line-height: 5rem;
+    color: var(--nav-font-color);
+    background-color: var(--border-color);
+    font-size: 1.2rem;
+    display: flex;
+    z-index: 200;
+    justify-content: center;
+    border-top: 1px solid var(--border-color);
+
+    a {
+        margin: 0 1rem;
+
+        &:hover {
+            color: var(--p-spanned-color);
+        }
+    }
+}
