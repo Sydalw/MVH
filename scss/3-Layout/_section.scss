@@ -1,13 +1,314 @@
-section {
-    height:50rem;
+.section-container {
+    width: min(108rem,100%);
+    margin: 0 auto;
+}
 
-    .section-container {
-        width:108rem;
-        margin: 0 auto;
-    }
+#section1 {
+    height:auto;
+
+        h2, h3, h4, p {
+            text-align: center;
+            font-weight: 700;
+        }
+
+        h3 {
+            text-transform: uppercase;
+            font-size: 2.25rem;
+        }
+        .section-header {
+            margin:7rem 0 0 0;
+        }
 
     .section-content {
         display: flex;
         flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        
+        .carte-thematique {
+            width:min(25rem,100%);
+            flex-grow: 1;
+            margin: 3rem 1rem;
+            padding: 0 1rem;
+
+            img {
+                height:7rem;
+                width:7rem;
+                margin: 0 auto;
+            }
+            h4 {
+                margin: 3rem 0 0 0;
+                text-transform: uppercase;
+                font-size: clamp(1.4rem, 1.5vw, 2.3rem);
+            }
+            p {
+                color:#999;
+                margin: 2rem 0 0 0;
+            }
+        }
+            
     }
+}
+
+#section2 {
+
+    margin: 0;
+
+    svg {
+        //display:none;
+        fill:var(--border-color);
+        height: 40rem;
+        position: relative;
+        margin-top:-25rem;
+        bottom:-25rem;
+        left:-3rem;
+        z-index:-50;
+    }
+
+    .section-content {
+        display:flex;
+        flex-direction: row;
+        flex:1 1 auto;
+        flex-wrap: wrap;
+
+        .photo-container {
+            img {
+                width:45rem;
+                height: 55rem;
+            }
+        }
+
+        .text-container {
+            display:flex;
+            flex-direction: column;
+            width: min(50rem, 100%);
+            align-items: center;
+            margin: 10rem 0 10rem 10rem;
+
+            h2 {
+                line-height: 1.2;
+                font-weight: 700;
+            }
+
+            p {
+                color:#999;
+                margin:2rem 0;
+            }
+
+            img {
+                display: block;
+                width:21rem;
+                position: relative;
+                right:-50%;
+            }
+        }
+    }
+}
+
+#section4 {       
+        img {
+            padding: 5rem;
+        }
+}
+
+
+#section5 {
+
+    height: 40rem;
+    margin: 5rem 0;
+
+    @media (max-width: 1199px) {
+          height: 33.6rem;
+          min-height: 33.6rem;
+      }
+    
+      @media (max-width: 991px) {
+          height: 102.9rem;
+          min-height: 102.9rem;
+      }
+    
+      @media (max-width: 767px) {
+          height: 308.7rem;
+          min-height: 308.7rem;
+      }
+    
+      @media (max-width: 575px) {
+          height: 194.4rem;
+          min-height: 194.4rem;
+      }
+
+    .section-container-large {
+
+        height: 40rem;
+        overflow: hidden;
+
+        @media (max-width: 1199px) {
+            height: 33.6rem;
+        }
+      
+        @media (max-width: 991px) {
+            height: 102.9rem;
+            grid-template-columns: repeat(2, auto);
+        }
+      
+        @media (max-width: 767px) {
+            grid-template-columns: repeat(1, auto);
+            height: 308.7rem;
+        }
+      
+        @media (max-width: 575px) {
+            height: 194.4rem;
+        }
+
+        display: grid;
+        grid-template-columns: repeat(4, auto);
+        column-gap: 0;
+        row-gap: 0;
+        min-height: 100%;
+
+        .carte-carrousel {
+            height: 100%;
+
+            .img-container {
+                background-position: 50% 50%;
+                background-repeat: no-repeat;
+                background-size: cover;
+                height: 100%;
+                transform: scale(1);
+                transition: transform 500ms;
+                width: 100%;
+                
+                .carrousel-img1 {
+                    object-position: center bottom;
+                }
+                .carrousel-img2 {
+                    object-position: center bottom;
+                }
+                .carrousel-img3 {
+                    object-position: left bottom;
+                }
+                .carrousel-img4 {
+                    object-position: center center;
+                }
+
+                img {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+}
+
+#section6 {
+
+    .section-container {
+        p {
+            font-weight: 700;
+            line-height: 1.7;
+            font-size: 2rem;
+            text-align: center;
+            margin:2rem 0;
+        }
+
+        .carte-temoignage {
+            margin: 5rem 15rem;
+            display: flex;
+            flex-direction: column;
+        }
+               
+        .guillemet-ouvrant {
+
+        }
+        
+        .guillemet-fermant {
+            display: block;
+            align-self: end;
+        }
+        .svg-guillemet-ouvrant {
+            fill:var(--border-color);
+            height:15rem;
+        }
+        
+        .svg-guillemet-fermant {
+            fill:var(--border-color);
+            height:5rem;
+        }
+        
+    }
+}
+
+
+#section7 {
+
+    margin: 10rem 0;
+
+    .section-container{
+
+        h2, h6 {
+            text-align: center;
+        }
+
+        h2 {
+            margin: 3rem 20rem 5rem;
+        }
+        h6 {
+            text-transform: uppercase;
+            font-size: 2.5rem;
+        }
+
+        img {
+            position: relative;
+            margin-top: -25%;
+        }
+        .cartes-tarif-container {
+            display:flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+
+            .carte-tarifs {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                .svg-prix-container{
+                    height: 13rem;
+                    margin: 3rem 0 0;
+
+                    svg {
+                        height: 100%;
+                        fill:var(--border-color);
+                    }
+                }
+                
+                h4 {
+                    margin: 3rem 0 0;
+                    color:var(--border-color);
+                    font-weight: 700;
+                    font-size: 5rem;
+                }
+
+                .trait {
+                    margin: 3rem 0 0;
+                    border: solid 1px var(--border-color);
+                    height: 2px;
+                    width: 100%;
+                }
+                
+                p {
+                    margin: 3rem 0;
+                    font-size: 2rem;
+                }
+
+                h6 {
+                    margin: 3rem 0 0;
+                    font-size: 2rem;
+                    text-transform: uppercase;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+
 }

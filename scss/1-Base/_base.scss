@@ -15,6 +15,10 @@ a {
     color: inherit;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Playfair Display", serif !important;
+}
+
 h1 {
     color: var(--h1-color);
     font-size: clamp(4.5rem, 6vw, 10rem);
@@ -36,6 +40,11 @@ h4 {
 }
 
 h5 {
+    font-size: clamp(1.6rem, 1.3vw, 2.5rem);
+    color: var(--h4-color);
+}
+
+h6 {
     font-size: clamp(1.6rem, 1.3vw, 2.5rem);
     color: var(--h4-color);
 }
