@@ -23,7 +23,7 @@
 //     }
 // }
 
-button {
+button, .btn {
     padding: 1.3em 3em;
     font-size: 12px;
     text-transform: uppercase;
@@ -39,13 +39,13 @@ button {
     outline: none;
   }
   
-  button:hover {
+  button:hover, .btn:hover {
     background-color: var(--p-spanned-color);
     box-shadow: 0px 15px 20px rgba(132, 170, 134, 0.4);
     color: #fff;
     //transform: translateY(-7px);
   }
   
-  button:active {
+  button:active, .btn:active {
     //transform: translateY(-1px);
   }

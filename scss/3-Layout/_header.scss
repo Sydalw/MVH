@@ -35,16 +35,22 @@
     flex-direction: column;
     justify-content: flex-end;
 
+    .titres {
+        position: relative;
+    }
+
     h5 {
         text-align: center;
         color: var(--nav-bg);
         text-transform: uppercase;
-
+    }
+    
+    h1 {
+        text-align: center;
+        color: var(--nav-bg);
+        margin: 1rem 0 5rem 0;
     }
 }
 
-h1 {
-    text-align: center;
-    color: var(--nav-bg);
-    margin: 1rem 0 5rem 0;
-}
+
+

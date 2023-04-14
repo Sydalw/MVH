@@ -1,0 +1,124 @@
+.fadeintop {
+
+    animation: fadeintop 2s ease;
+
+     // -moz-animation: fadein 2s; /* Firefox */
+    // -webkit-animation: fadein 2s; /* Safari et Chrome */
+    // -o-animation: fadein 2s; /* Opera */
+    @keyframes fadeintop {
+        from {
+            top:-50rem;
+            opacity:0;
+        }
+        to {
+            top:0;
+            opacity:1;
+        }
+    }
+    // @-moz-keyframes fadein { /* sur Firefox */
+    //     from {
+    //         opacity:0;
+    //     }
+    //     to {
+    //         opacity:1;
+    //     }
+    // }
+    // @-webkit-keyframes fadein { /* sur Safari et Chrome */
+    //     from {
+    //         opacity:0;
+    //     }
+    //     to {
+    //         opacity:1;
+    //     }
+    // }
+    // @-o-keyframes fadein { /* sur Opera */
+    //     from {
+    //         opacity:0;
+    //     }
+    //     to {
+    //         opacity: 1;
+    //     }
+    // }
+}
+
+.fadeinleft {
+    animation: fadeinleft 2s ease;
+    // -moz-animation: fadein 2s; /* Firefox */
+    // -webkit-animation: fadein 2s; /* Safari et Chrome */
+    // -o-animation: fadein 2s; /* Opera */
+    @keyframes fadeinleft {
+        from {
+            left:-25rem;
+            opacity:0;
+        }
+        to {
+            left:-3rem;
+            opacity:1;
+        }
+    }
+    // @-moz-keyframes fadein { /* sur Firefox */
+    //     from {
+    //         opacity:0;
+    //     }
+    //     to {
+    //         opacity:1;
+    //     }
+    // }
+    // @-webkit-keyframes fadein { /* sur Safari et Chrome */
+    //     from {
+    //         opacity:0;
+    //     }
+    //     to {
+    //         opacity:1;
+    //     }
+    // }
+    // @-o-keyframes fadein { /* sur Opera */
+    //     from {
+    //         opacity:0;
+    //     }
+    //     to {
+    //         opacity: 1;
+    //     }
+    // }
+}
+
+.fadeinform {
+    animation: fadeinform 2s ease;
+    // -moz-animation: fadein 2s; /* Firefox */
+    // -webkit-animation: fadein 2s; /* Safari et Chrome */
+    // -o-animation: fadein 2s; /* Opera */
+    @keyframes fadeinform {
+        from {
+            left:-25rem;
+            opacity:0;
+        }
+        to {
+            left:0rem;
+            opacity:1;
+        }
+    }
+    // @-moz-keyframes fadein { /* sur Firefox */
+    //     from {
+    //         opacity:0;
+    //     }
+    //     to {
+    //         opacity:1;
+    //     }
+    // }
+    // @-webkit-keyframes fadein { /* sur Safari et Chrome */
+    //     from {
+    //         opacity:0;
+    //     }
+    //     to {
+    //         opacity:1;
+    //     }
+    // }
+    // @-o-keyframes fadein { /* sur Opera */
+    //     from {
+    //         opacity:0;
+    //     }
+    //     to {
+    //         opacity: 1;
+    //     }
+    // }
+}

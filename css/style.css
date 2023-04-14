@@ -15,7 +15,7 @@
 /*
   3. Allow percentage-based heights in the application
 */
-html, body {
+html {
   height: 100%;
 }
 
@@ -59,7 +59,7 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 :root {
-  --nav-bg: #fff;
+  --nav-bg: #fdf8f3;
   --body-bg: #fff;
   --nav-font-color:#1D1D1B;
   --h1-color: #1D1D1B;
@@ -77,7 +77,7 @@ p, h1, h2, h3, h4, h5, h6 {
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --nav-bg: #fff;
+    --nav-bg: #fdf8f3;
     --body-bg: #fff;
     --nav-font-color:#1D1D1B;
     --border-color:#F2D7BF;
@@ -94,7 +94,7 @@ p, h1, h2, h3, h4, h5, h6 {
   }
 }
 :root {
-  --nav-bg: #fff;
+  --nav-bg: #fdf8f3;
   --body-bg: #fff;
   --nav-font-color:#1D1D1B;
   --h1-color: #1D1D1B;
@@ -112,7 +112,7 @@ p, h1, h2, h3, h4, h5, h6 {
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --nav-bg: #fff;
+    --nav-bg: #fdf8f3;
     --body-bg: #fff;
     --nav-font-color:#1D1D1B;
     --border-color:#F2D7BF;
@@ -217,13 +217,15 @@ p {
   flex-direction: column;
   justify-content: flex-end;
 }
+.banner .titres {
+  position: relative;
+}
 .banner h5 {
   text-align: center;
   color: var(--nav-bg);
   text-transform: uppercase;
 }
-
-h1 {
+.banner h1 {
   text-align: center;
   color: var(--nav-bg);
   margin: 1rem 0 5rem 0;
@@ -260,6 +262,7 @@ nav {
   font-size: clamp(1rem, 1.6em, 2rem);
   font-weight: 700;
   position: sticky;
+  position: -webkit-sticky;
   top: 0px;
   z-index: 1000;
   border-bottom: 1px solid var(--border-color);
@@ -268,7 +271,7 @@ nav {
 }
 nav img {
   height: 100%;
-  position: absolute;
+  object-fit: contain;
 }
 nav ul {
   width: 100%;
@@ -469,6 +472,11 @@ nav ul li a {
 #section2 {
   margin: 0;
 }
+@media (max-width: 76.8rem) {
+  #section2 {
+    margin: 15rem 5rem 0;
+  }
+}
 #section2 svg {
   fill: var(--border-color);
   height: 40rem;
@@ -478,15 +486,46 @@ nav ul li a {
   left: -3rem;
   z-index: -50;
 }
+@media (max-width: 76.8rem) {
+  #section2 svg {
+    height: 20rem;
+    bottom: -15rem;
+  }
+}
+@media (max-width: 45rem) {
+  #section2 svg {
+    height: 40rem;
+    left: -3rem;
+    bottom: -30rem;
+    margin-top: -45rem;
+  }
+}
 #section2 .section-content {
   display: flex;
   flex-direction: row;
   flex: 1 1 auto;
   flex-wrap: wrap;
 }
+@media (max-width: 45rem) {
+  #section2 .section-content {
+    flex-direction: column;
+  }
+}
 #section2 .section-content .photo-container img {
   width: 45rem;
   height: 55rem;
+}
+@media (max-width: 76.8rem) {
+  #section2 .section-content .photo-container img {
+    width: 25rem;
+    height: auto;
+  }
+}
+@media (max-width: 45rem) {
+  #section2 .section-content .photo-container img {
+    width: 90%;
+    margin: 0 auto;
+  }
 }
 #section2 .section-content .text-container {
   display: flex;
@@ -495,6 +534,18 @@ nav ul li a {
   align-items: center;
   margin: 10rem 0 10rem 10rem;
 }
+@media (max-width: 76.8rem) {
+  #section2 .section-content .text-container {
+    margin: 5rem 0 5rem 5rem;
+    width: calc(100% - 35rem);
+  }
+}
+@media (max-width: 45rem) {
+  #section2 .section-content .text-container {
+    width: 90%;
+    margin: 5rem auto;
+  }
+}
 #section2 .section-content .text-container h2 {
   line-height: 1.2;
   font-weight: 700;
@@ -502,21 +553,26 @@ nav ul li a {
 #section2 .section-content .text-container p {
   color: #999;
   margin: 2rem 0;
+  text-overflow: clip;
 }
 #section2 .section-content .text-container img {
   display: block;
-  width: 21rem;
+  width: min(21rem, 10vw);
   position: relative;
-  right: -50%;
+  right: -8vw;
 }
 
+#section4 {
+  background-color: var(--nav-bg);
+}
 #section4 img {
   padding: 5rem;
+  position: relative;
 }
 
 #section5 {
   height: 40rem;
-  margin: 5rem 0;
+  margin: 0;
 }
 @media (max-width: 1199px) {
   #section5 {
@@ -603,6 +659,9 @@ nav ul li a {
   object-fit: cover;
 }
 
+#section6 {
+  background-color: var(--nav-bg);
+}
 #section6 .section-container p {
   font-weight: 700;
   line-height: 1.7;
@@ -611,7 +670,8 @@ nav ul li a {
   margin: 2rem 0;
 }
 #section6 .section-container .carte-temoignage {
-  margin: 5rem 15rem;
+  margin: 0rem 15rem 5rem;
+  padding: 5rem 0;
   display: flex;
   flex-direction: column;
 }
@@ -641,9 +701,11 @@ nav ul li a {
   text-transform: uppercase;
   font-size: 2.5rem;
 }
-#section7 .section-container img {
+#section7 .section-container .photo-deco {
+  fill: var(--border-color);
   position: relative;
   margin-top: -25%;
+  height: 20rem;
 }
 #section7 .section-container .cartes-tarif-container {
   display: flex;
@@ -686,7 +748,7 @@ nav ul li a {
   font-weight: 700;
 }
 
-button {
+button, .btn {
   padding: 1.3em 3em;
   font-size: 12px;
   text-transform: uppercase;
@@ -702,7 +764,7 @@ button {
   outline: none;
 }
 
-button:hover {
+button:hover, .btn:hover {
   background-color: var(--p-spanned-color);
   box-shadow: 0px 15px 20px rgba(132, 170, 134, 0.4);
   color: #fff;
@@ -728,9 +790,15 @@ button:hover {
   text-transform: uppercase;
 }
 #contact .contact-container .formulaire_formContainer {
+  position: relative;
   background-color: #fff;
   padding: 5rem;
   border-radius: 5rem;
+}
+@media (max-width: 108rem) {
+  #contact .contact-container .formulaire_formContainer {
+    margin: 5rem;
+  }
 }
 #contact .contact-container .formulaire_formContainer .formulaire {
   display: flex;
@@ -747,11 +815,6 @@ button:hover {
 #contact .contact-container .formulaire_formContainer .formulaire input[type=text]:focus {
   outline: none;
   border: 3px solid var(--p-spanned-color);
-}
-@media screen and (max-width: 65rem) {
-  #contact .contact-container .formulaire_formContainer .formulaire input[type=text] {
-    margin: 2rem 5rem;
-  }
 }
 #contact .contact-container .formulaire_formContainer .formulaire input[type=submit] {
   border: none;
@@ -770,9 +833,46 @@ button:hover {
   outline: none;
   border: 3px solid var(--p-spanned-color);
 }
-@media screen and (max-width: 65rem) {
-  #contact .contact-container .formulaire_formContainer .formulaire textarea {
-    margin: 2rem 5rem;
+
+.fadeintop {
+  animation: fadeintop 2s ease;
+}
+@keyframes fadeintop {
+  from {
+    top: -50rem;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+.fadeinleft {
+  animation: fadeinleft 2s ease;
+}
+@keyframes fadeinleft {
+  from {
+    left: -25rem;
+    opacity: 0;
+  }
+  to {
+    left: -3rem;
+    opacity: 1;
+  }
+}
+
+.fadeinform {
+  animation: fadeinform 2s ease;
+}
+@keyframes fadeinform {
+  from {
+    left: -25rem;
+    opacity: 0;
+  }
+  to {
+    left: 0rem;
+    opacity: 1;
   }
 }
 

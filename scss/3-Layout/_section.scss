@@ -34,7 +34,7 @@
             img {
                 height:7rem;
                 width:7rem;
-                margin: 0 auto;
+                margin: 0 auto
             }
             h4 {
                 margin: 3rem 0 0 0;
@@ -53,9 +53,14 @@
 #section2 {
 
     margin: 0;
+    @media (max-width: 76.8rem) {
+        margin: 15rem 5rem 0;
+    }
+
+    .section-container {
+    }
 
     svg {
-        //display:none;
         fill:var(--border-color);
         height: 40rem;
         position: relative;
@@ -63,18 +68,40 @@
         bottom:-25rem;
         left:-3rem;
         z-index:-50;
+
+        @media (max-width: 76.8rem) {
+            height: 20rem;
+            bottom:-15rem;
+        }
+        @media (max-width: 45rem) {
+            height:40rem;
+            left:-3rem;
+            bottom: -30rem;
+            margin-top: -45rem;
+        }
     }
 
     .section-content {
         display:flex;
         flex-direction: row;
-        flex:1 1 auto;
+        flex: 1 1 auto;
         flex-wrap: wrap;
+        @media (max-width: 45rem) {
+            flex-direction: column;
+        }
 
         .photo-container {
             img {
                 width:45rem;
                 height: 55rem;
+                @media (max-width: 76.8rem) {
+                    width:25rem;
+                    height: auto;
+                }
+                @media (max-width: 45rem) {
+                    width:90%;
+                    margin:0 auto;
+                }
             }
         }
 
@@ -85,6 +112,15 @@
             align-items: center;
             margin: 10rem 0 10rem 10rem;
 
+            @media (max-width: 76.8rem) {
+                    margin: 5rem 0 5rem 5rem;
+                    width: calc(100% - 35rem);
+                }
+            @media (max-width: 45rem) {
+                width:90%;
+                margin: 5rem auto;;
+            }
+
             h2 {
                 line-height: 1.2;
                 font-weight: 700;
@@ -93,21 +129,25 @@
             p {
                 color:#999;
                 margin:2rem 0;
+                text-overflow: clip;
             }
 
             img {
                 display: block;
-                width:21rem;
+                width:min(21rem,10vw);
                 position: relative;
-                right:-50%;
+                right:-8vw;
             }
         }
     }
 }
 
-#section4 {       
+#section4 {
+    
+    background-color: var(--nav-bg);
         img {
             padding: 5rem;
+            position: relative;
         }
 }
 
@@ -115,7 +155,7 @@
 #section5 {
 
     height: 40rem;
-    margin: 5rem 0;
+    margin: 0;
 
     @media (max-width: 1199px) {
           height: 33.6rem;
@@ -203,6 +243,8 @@
 
 #section6 {
 
+    background-color: var(--nav-bg);
+
     .section-container {
         p {
             font-weight: 700;
@@ -213,7 +255,8 @@
         }
 
         .carte-temoignage {
-            margin: 5rem 15rem;
+            margin: 0rem 15rem 5rem;
+            padding:5rem 0;
             display: flex;
             flex-direction: column;
         }
@@ -258,9 +301,11 @@
             font-size: 2.5rem;
         }
 
-        img {
+        .photo-deco {
+            fill:var(--border-color);
             position: relative;
             margin-top: -25%;
+            height: 20rem;
         }
         .cartes-tarif-container {
             display:flex;

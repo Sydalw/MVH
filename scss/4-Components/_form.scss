@@ -10,8 +10,8 @@
         display:flex;
         flex-direction: column;
         justify-content: space-evenly;
-        margin: auto;
-
+        margin: auto;    
+        
         h4 {
             text-align: center;
             color:#fff;
@@ -19,10 +19,13 @@
         }
 
         .formulaire_formContainer {
+            position:relative;
             background-color: #fff;
             padding: 5rem;
             border-radius: 5rem;
-
+            @media (max-width: 108rem) {
+                margin: 5rem;
+            }
             .formulaire {
                 display: flex;
                 flex-direction: column;
@@ -38,10 +41,6 @@
                         &:focus {
                             outline: none;
                             border: 3px solid var(--p-spanned-color);
-                        }
-            
-                        @media screen and (max-width: 65rem) {
-                            margin: 2rem 5rem;
                         }
                     }
             
@@ -63,9 +62,6 @@
                     &:focus {
                         outline: none;
                         border: 3px solid var(--p-spanned-color);
-                    }
-                    @media screen and (max-width: 65rem) {
-                        margin: 2rem 5rem;
                     }
                 }
             }
