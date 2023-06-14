@@ -681,11 +681,11 @@ nav ul li a {
   line-height: 1.7;
   font-size: 2rem;
   text-align: center;
-  margin: 2rem 0;
+  margin: 0;
 }
 #section6 .section-container .carte-temoignage {
   margin: 0rem 15rem 5rem;
-  padding: 5rem 0;
+  padding: 3rem 0;
   display: flex;
   flex-direction: column;
 }
@@ -695,7 +695,7 @@ nav ul li a {
 }
 #section6 .section-container .svg-guillemet-ouvrant {
   fill: var(--border-color);
-  height: 15rem;
+  height: 5rem;
 }
 #section6 .section-container .svg-guillemet-fermant {
   fill: var(--border-color);
