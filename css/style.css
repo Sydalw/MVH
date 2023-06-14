@@ -689,6 +689,11 @@ nav ul li a {
   display: flex;
   flex-direction: column;
 }
+@media (max-width: 45rem) {
+  #section6 .section-container .carte-temoignage {
+    margin: 0 5rem;
+  }
+}
 #section6 .section-container .guillemet-fermant {
   display: block;
   align-self: end;
@@ -710,6 +715,11 @@ nav ul li a {
 }
 #section7 .section-container h2 {
   margin: 3rem 20rem 5rem;
+}
+@media (max-width: 45rem) {
+  #section7 .section-container h2 {
+    margin: 0 5rem;
+  }
 }
 #section7 .section-container h6 {
   text-transform: uppercase;
@@ -770,6 +780,11 @@ nav ul li a {
 }
 #FAQ h2 {
   margin: 3rem 20rem 5rem;
+}
+@media (max-width: 45rem) {
+  #FAQ h2 {
+    margin: 0 5rem;
+  }
 }
 #FAQ h6 {
   text-transform: uppercase;
