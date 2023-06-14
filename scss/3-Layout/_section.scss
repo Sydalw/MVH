@@ -32,9 +32,15 @@
             padding: 0 1rem;
 
             img {
+                height:8rem;
+                width: 8rem;
+                margin: 0 auto;
+            }
+            svg {
+                fill:var(--p-spanned-color);
                 height:7rem;
                 width:7rem;
-                margin: 0 auto
+                margin: 0 auto;
             }
             h4 {
                 margin: 3rem 0 0 0;
@@ -355,5 +361,64 @@
             }
         }
     }
+}
 
+#FAQ {
+    h2, h6 {
+        text-align: center;
+    }
+
+    h2 {
+        margin: 3rem 20rem 5rem;
+    }
+
+    h6 {
+        text-transform: uppercase;
+        font-size: 2.5rem;
+    }
+
+    .questions-container {
+        margin: 3rem 0;
+    }
+
+    details{
+        background-color: var(--body-bg);
+        color: var(--p-color);
+        font-size: 1.5rem;
+        
+        p {
+            color: var(--p-color);
+            font-size: 1.5rem;
+        }
+      }
+      
+      summary {
+        padding: .5em 1.3rem;
+        list-style: none;
+        display: flex;
+        justify-content: space-between;  
+        transition: height 1s ease;
+        font-weight: 500;
+      }
+      
+      summary::-webkit-details-marker {
+        display: none;
+      }
+      
+      summary:after{
+        content: "\002B";
+      }
+      
+      details[open] summary {
+          border-bottom: 1px solid #aaa;
+          margin-bottom: .5em;
+      }
+      
+      details[open] summary:after{
+        content: "\00D7";
+      }
+      
+      details[open] p{
+        padding: .5em 1em;
+      }
 }

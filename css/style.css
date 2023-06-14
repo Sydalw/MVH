@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*
   1. Use a more-intuitive box-sizing model.
 */
@@ -128,6 +129,10 @@ p, h1, h2, h3, h4, h5, h6 {
     --hover-title-color:#84AA86;
   }
 }
+@font-face {
+  font-family: "acier";
+  src: url("../ressources/fonts/acier-text-solid.ttf");
+}
 html {
   font-size: 62.5%;
   font-family: "Roboto", "Helvetica Neue", "Comfortaa";
@@ -148,6 +153,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
+  font-family: "acier", "Playfair Display", serif !important;
   color: var(--h1-color);
   font-size: clamp(4.5rem, 6vw, 10rem);
 }
@@ -224,6 +230,7 @@ p {
   text-align: center;
   color: var(--nav-bg);
   text-transform: uppercase;
+  font-family: "acier", "Playfair Display", serif !important;
 }
 .banner h1 {
   text-align: center;
@@ -270,8 +277,9 @@ nav {
   justify-content: center;
 }
 nav img {
-  height: 100%;
+  height: 50%;
   object-fit: contain;
+  margin: 0 auto;
 }
 nav ul {
   width: 100%;
@@ -455,6 +463,12 @@ nav ul li a {
   padding: 0 1rem;
 }
 #section1 .section-content .carte-thematique img {
+  height: 8rem;
+  width: 8rem;
+  margin: 0 auto;
+}
+#section1 .section-content .carte-thematique svg {
+  fill: var(--p-spanned-color);
   height: 7rem;
   width: 7rem;
   margin: 0 auto;
@@ -746,6 +760,53 @@ nav ul li a {
   font-size: 2rem;
   text-transform: uppercase;
   font-weight: 700;
+}
+
+#FAQ h2, #FAQ h6 {
+  text-align: center;
+}
+#FAQ h2 {
+  margin: 3rem 20rem 5rem;
+}
+#FAQ h6 {
+  text-transform: uppercase;
+  font-size: 2.5rem;
+}
+#FAQ .questions-container {
+  margin: 3rem 0;
+}
+#FAQ details {
+  background-color: var(--body-bg);
+  color: var(--p-color);
+  font-size: 1.5rem;
+}
+#FAQ details p {
+  color: var(--p-color);
+  font-size: 1.5rem;
+}
+#FAQ summary {
+  padding: 0.5em 1.3rem;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  transition: height 1s ease;
+  font-weight: 500;
+}
+#FAQ summary::-webkit-details-marker {
+  display: none;
+}
+#FAQ summary:after {
+  content: "+";
+}
+#FAQ details[open] summary {
+  border-bottom: 1px solid #aaa;
+  margin-bottom: 0.5em;
+}
+#FAQ details[open] summary:after {
+  content: "×";
+}
+#FAQ details[open] p {
+  padding: 0.5em 1em;
 }
 
 button, .btn {
