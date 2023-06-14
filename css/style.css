@@ -762,6 +762,9 @@ nav ul li a {
   font-weight: 700;
 }
 
+#FAQ {
+  margin: 10rem 0;
+}
 #FAQ h2, #FAQ h6 {
   text-align: center;
 }
