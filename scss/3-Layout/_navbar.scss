@@ -13,6 +13,13 @@ nav {
     justify-content: center;
     
 
+    .logo-container {
+        width:7.5rem;
+        @media screen and (max-width: 65rem) {
+            margin-left:1rem;
+        }
+    }
+
     img {
         height:50%;
         object-fit: contain;

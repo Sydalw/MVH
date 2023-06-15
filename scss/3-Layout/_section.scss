@@ -317,8 +317,12 @@
         .photo-deco {
             fill:var(--border-color);
             position: relative;
-            margin-top: -25%;
+            margin-bottom: -10%;
             height: 20rem;
+            @media (max-width: 45rem) {
+                //margin-top: -5rem;
+                height: 10rem;
+            }
         }
         .cartes-tarif-container {
             display:flex;

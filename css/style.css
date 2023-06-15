@@ -276,6 +276,14 @@ nav {
   display: flex;
   justify-content: center;
 }
+nav .logo-container {
+  width: 7.5rem;
+}
+@media screen and (max-width: 65rem) {
+  nav .logo-container {
+    margin-left: 1rem;
+  }
+}
 nav img {
   height: 50%;
   object-fit: contain;
@@ -728,8 +736,13 @@ nav ul li a {
 #section7 .section-container .photo-deco {
   fill: var(--border-color);
   position: relative;
-  margin-top: -25%;
+  margin-bottom: -10%;
   height: 20rem;
+}
+@media (max-width: 45rem) {
+  #section7 .section-container .photo-deco {
+    height: 10rem;
+  }
 }
 #section7 .section-container .cartes-tarif-container {
   display: flex;
