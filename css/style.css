@@ -282,12 +282,18 @@ nav .logo-container {
 @media screen and (max-width: 65rem) {
   nav .logo-container {
     margin-left: 1rem;
+    height: 100%;
   }
 }
 nav img {
   height: 50%;
   object-fit: contain;
   margin: 0 auto;
+}
+@media screen and (max-width: 65rem) {
+  nav #nav-box-sizer {
+    display: block;
+  }
 }
 nav ul {
   width: 100%;
@@ -301,7 +307,7 @@ nav ul {
   nav ul {
     display: block;
     position: relative;
-    top: -43rem;
+    top: -56rem;
     transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
     z-index: -10;
   }
