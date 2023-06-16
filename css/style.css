@@ -307,9 +307,8 @@ nav ul {
   nav ul {
     display: block;
     position: relative;
-    top: -56rem;
+    top: -53rem;
     transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
-    z-index: -10;
   }
 }
 nav ul li {
@@ -330,6 +329,7 @@ nav ul li:hover {
     background-color: var(--nav-bg);
   }
   nav ul li:hover {
+    cursor: pointer;
     background-color: var(--accentuated-color);
     color: var(--p-spanned-color);
     border-bottom: 0;

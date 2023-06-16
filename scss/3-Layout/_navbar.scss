@@ -26,8 +26,9 @@ nav {
         margin:0 auto;
     }
 
-    @media screen and (max-width: 65rem) {
-        #nav-box-sizer {
+
+    #nav-box-sizer {
+        @media screen and (max-width: 65rem) {
             display:block;
         }
     }
@@ -43,9 +44,9 @@ nav {
         @media screen and (max-width: 65rem) {
             display: block;
             position: relative;
-            top: -56rem;
+            top: -53rem;
             transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
-            z-index: -10;
+            //z-index: -10;
         }
         li {
             display: inline-block;
@@ -65,6 +66,7 @@ nav {
                 background-color: var(--nav-bg);
                 
                 &:hover {
+                    cursor: pointer;
                     background-color: var(--accentuated-color);
                     color: var(--p-spanned-color);
                     border-bottom: 0;
