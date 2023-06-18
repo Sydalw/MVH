@@ -286,9 +286,9 @@ nav .logo-container {
   }
 }
 nav img {
-  height: 50%;
+  height: 40%;
   object-fit: contain;
-  margin: 0 auto;
+  margin: 5% auto;
 }
 @media screen and (max-width: 65rem) {
   nav #nav-box-sizer {
