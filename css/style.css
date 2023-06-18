@@ -143,6 +143,12 @@ body {
   background-color: var(--body-bg);
 }
 
+.box-sizer {
+  width: 108rem;
+  display: flex;
+  justify-content: space-between;
+}
+
 a {
   text-decoration: none;
   color: inherit;
@@ -207,37 +213,80 @@ p {
   color: var(--p-spanned-color);
 }
 
-.box-sizer {
-  width: 108rem;
-  display: flex;
-  justify-content: space-between;
-}
-
 .banner {
-  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), url("../ressources/images/CA9A9674 - Magalie Villora - 6.jpeg");
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("../ressources/images/enfant_volant.jpg");
   height: 86rem;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: 50% 50%;
+  background-position: 50% 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+}
+@media (max-width: 991px) {
+  .banner {
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+  }
 }
 .banner .titres {
   position: relative;
 }
 .banner h5 {
-  text-align: center;
+  text-align: left;
   color: var(--nav-bg);
   text-transform: uppercase;
   font-family: "acier", "Playfair Display", serif !important;
+  margin: 0 0 0 3rem;
+}
+@media (max-width: 991px) {
+  .banner h5 {
+    text-align: center;
+    margin: 0;
+  }
 }
 .banner h1 {
-  text-align: center;
+  text-align: left;
   color: var(--nav-bg);
-  margin: 1rem 0 5rem 0;
+  margin: 1rem 0 5rem 3rem;
 }
-
+@media (max-width: 991px) {
+  .banner h1 {
+    text-align: center;
+    margin: 0;
+  }
+}
+.banner .photo-vignette {
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05)), url("../ressources/images/CA9A9674 - Magalie Villora - 6.jpeg");
+  height: 86rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+  border-radius: 50%;
+  height: 50rem;
+  width: 50rem;
+  background-position: 50% 50%;
+  position: absolute;
+  right: 5%;
+  top: 20%;
+}
+@media (max-width: 1199px) {
+  .banner .photo-vignette {
+    height: 40rem;
+    width: 40rem;
+  }
+}
+@media (max-width: 991px) {
+  .banner .photo-vignette {
+    height: 35rem;
+    width: 35rem;
+    position: relative;
+    top: 0;
+    left: 0;
+    margin: 1rem 0;
+  }
+}
 footer {
   background-color: var(--nav-bg);
 }
