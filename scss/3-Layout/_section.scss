@@ -226,6 +226,9 @@
                 
                 .carrousel-img1 {
                     object-position: center bottom;
+                    @media (max-width: 575px) {
+                        display:none;
+                    }
                 }
                 .carrousel-img2 {
                     object-position: center bottom;
