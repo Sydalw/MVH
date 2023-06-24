@@ -67,7 +67,7 @@
     }
 
     svg {
-        fill:var(--border-color);
+        fill:var(--indian-red);
         height: 40rem;
         position: relative;
         margin-top:-25rem;
@@ -283,12 +283,12 @@
             align-self: end;
         }
         .svg-guillemet-ouvrant {
-            fill:var(--border-color);
+            fill:var(--indian-red);
             height:5rem;
         }
         
         .svg-guillemet-fermant {
-            fill:var(--border-color);
+            fill:var(--indian-red);
             height:5rem;
         }
         
@@ -318,7 +318,7 @@
         }
 
         .photo-deco {
-            fill:var(--border-color);
+            fill:var(--indian-red);
             position: relative;
             margin-bottom: -10%;
             height: 20rem;
@@ -343,20 +343,20 @@
 
                     svg {
                         height: 100%;
-                        fill:var(--border-color);
+                        fill:var(--indian-red);
                     }
                 }
                 
                 h4 {
                     margin: 3rem 0 0;
-                    color:var(--border-color);
+                    color:var(--cambridge-blue);
                     font-weight: 700;
                     font-size: 5rem;
                 }
 
                 .trait {
                     margin: 3rem 0 0;
-                    border: solid 1px var(--border-color);
+                    border: solid 1px var(--indian-red);
                     height: 2px;
                     width: 100%;
                 }
@@ -380,6 +380,7 @@
 #FAQ {
 
     margin: 10rem 0;
+    
     h2, h6 {
         text-align: center;
     }
@@ -398,46 +399,62 @@
 
     .questions-container {
         margin: 3rem 0;
+
+        .question-container {
+            display:flex;
+            margin:1rem 0;
+
+            .numero-FAQ {
+                width:3rem;
+                font-size: 1.5rem;
+                padding: .5em 1.3rem;
+                font-weight: 500;
+                background-color: var(--indian-red50);
+            }
+
+            details {
+                background-color: var(--body-bg);
+                color: var(--p-color);
+                font-size: 1.5rem;
+                width:calc(100% - 3rem);
+                
+                p {
+                    color: var(--p-color);
+                    font-size: 1.5rem;
+                }
+
+                summary {
+                    padding: .5em 1.3rem;
+                    list-style: none;
+                    display: flex;
+                    justify-content: space-between;  
+                    transition: height 1s ease;
+                    font-weight: 500;
+                    background-color: var(--indian-red25);
+
+                    &::-webkit-details-marker {
+                        display: none;
+                    }
+                    &:after{
+                        content: "\002B";
+                    }
+                }
+
+            }
+        }
+    }
+     
+    details[open] summary {
+        border-bottom: 1px solid #aaa;
+        margin-bottom: .5em;
+        background-color: var(--indian-red50);
     }
 
-    details{
-        background-color: var(--body-bg);
-        color: var(--p-color);
-        font-size: 1.5rem;
-        
-        p {
-            color: var(--p-color);
-            font-size: 1.5rem;
-        }
-      }
-      
-      summary {
-        padding: .5em 1.3rem;
-        list-style: none;
-        display: flex;
-        justify-content: space-between;  
-        transition: height 1s ease;
-        font-weight: 500;
-      }
-      
-      summary::-webkit-details-marker {
-        display: none;
-      }
-      
-      summary:after{
-        content: "\002B";
-      }
-      
-      details[open] summary {
-          border-bottom: 1px solid #aaa;
-          margin-bottom: .5em;
-      }
-      
-      details[open] summary:after{
+    details[open] summary:after{
         content: "\00D7";
-      }
+    }
       
-      details[open] p{
+    details[open] p{
         padding: .5em 1em;
-      }
+    }
 }

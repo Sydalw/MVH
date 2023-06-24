@@ -3,9 +3,30 @@
     font-family: 'acier';
     src: url('../ressources/fonts/acier-text-solid.ttf');
 }
+
+@font-face {
+    font-family: 'Alegreya sans';
+    src: url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;700&display=swap');
+}
+
+@font-face {
+    font-family: 'Open sans';
+    src: url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+}
+
+@font-face {
+    font-family: 'Cardo';
+    src: url('https://fonts.googleapis.com/css2?family=Cardo:wght@400;700&display=swap');
+}
+
+@font-face {
+    font-family: 'Josefin sans';
+    src: url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+}
+
 html {
     font-size: $taille_police;
-    font-family: 'Roboto', 'Helvetica Neue', 'Comfortaa';
+    font-family: 'Open sans', 'Josefin sans', 'Roboto', 'Helvetica Neue', 'Comfortaa';
     height: 1vh;
 }
 
@@ -29,7 +50,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    font-family: "acier", "Playfair Display", serif !important;
+    font-family: "Alegryea sans", "Cardo", "acier", "Playfair Display", serif !important;
     color: var(--h1-color);
     font-size: clamp(4.5rem, 6vw, 10rem);
 }
