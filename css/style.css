@@ -943,7 +943,7 @@ nav ul li a {
   justify-content: space-between;
   transition: height 1s ease;
   font-weight: 500;
-  background-color: var(--indian-red25);
+  background-color: var(--nav-bg);
 }
 #FAQ .questions-container .question-container details summary::-webkit-details-marker {
   display: none;
