@@ -84,3 +84,9 @@ p {
     font-size: clamp(1.3rem, 1.4vw, 1.6rem);
     color: var(--p-color);
 }
+
+#btn-fixed {
+    position: fixed;
+    bottom: 2rem;
+    right:2rem;
+}

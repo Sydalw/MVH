@@ -5,7 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Magalie VILLORA Hypnose</title>
-    <link rel="icon" type="image/svg" href="" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./ressources/images/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./ressources/images/favicon_io//favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./ressources/images/favicon_io//favicon-16x16.png">
     <link href="./css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -13,6 +15,9 @@
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.12.0/dist/cdn.min.js"></script>
 </head>
 <body>
+    <button class="btn" id="btn-fixed">
+        <a href="#contact">Me contacter</a>
+    </button>
     <div class="top-bar">
         <div class="box-sizer">
             <div>
@@ -41,9 +46,9 @@
                     <span class="navigationIcon">&nbsp;</span>
                 </label>
                 <ul class="list-nav">
-                    <li><a href="#section1">Qui suis-je</a></li>
-                    <li><a href="#services">Mes services</a></li>
-                    <li><a href="#tarifs">Tarifs & Contact</a></li>
+                    <li><a href="./qui-suis-je.html">Qui suis-je</a></li>
+                    <li><a href="./mes-outils.html">Mon outil</a></li>
+                    <li><a href="#section7">Tarifs & Contact</a></li>
                     <!-- <li><a href="#contact">Contact</a></li> -->
                 </ul>
             </div>
@@ -61,11 +66,30 @@
         </div>
     </header>
     <main>
-        <section id="section1" class="">
+        <section class="quote" id="">
+            <div class="section-container">
+                <div class="carte-temoignage">
+                    <span class="guillemet-ouvrant">
+                        <svg class="svg-guillemet-ouvrant" viewBox="0 0 409.294 409.294" id="svg-6c4a">
+                            <path d="m0 204.647v175.412h175.412v-175.412h-116.941c0-64.48 52.461-116.941 116.941-116.941v-58.471c-96.728 0-175.412 78.684-175.412 175.412z"></path>
+                            <path d="m409.294 87.706v-58.471c-96.728 0-175.412 78.684-175.412 175.412v175.412h175.412v-175.412h-116.941c0-64.48 52.461-116.941 116.941-116.941z"></path>
+                        </svg>
+                    </span>
+                    <p class="">“Nous vivons tous des évènements qui nous impactent. <br/>En général, on s’adapte, on digère mais parfois ça coince…”</p>
+                    <span class="guillemet-fermant">
+                        <svg class="svg-guillemet-fermant" viewBox="0 0 409.294 409.294" id="svg-daee">
+                            <path d="m0 204.647v175.412h175.412v-175.412h-116.941c0-64.48 52.461-116.941 116.941-116.941v-58.471c-96.728 0-175.412 78.684-175.412 175.412z"></path>
+                            <path d="m409.294 87.706v-58.471c-96.728 0-175.412 78.684-175.412 175.412v175.412h175.412v-175.412h-116.941c0-64.48 52.461-116.941 116.941-116.941z"></path>
+                        </svg>
+                    </span>
+                </div>
+            </div>
+        </section>
+        <section id="thematiques" class="">
             <div class="section-container">
                 <div class="section-header">
-                    <h3 class="">Les thématiques que j'accompagne</h3>
-                    <h2 class=""> Pour vous aider à vous sentir vous même</h2>
+                    <!-- <h3 class="">Nous vivons tous des évènements qui nous impactent. <br/>En général, on s’adapte, on digère mais parfois ça coince…</h3> -->
+                    <h2 class="">Je vous <br/>accompagne</h2>
                 </div>
                 <div class="section-content">
                     <div class="carte-thematique">
@@ -88,7 +112,7 @@
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M15.0002 20.25C16.9332 20.25 18.5002 18.683 18.5002 16.75C18.5002 14.817 16.9332 13.25 15.0002 13.25C13.0672 13.25 11.5002 14.817 11.5002 16.75C11.5002 18.683 13.0672 20.25 15.0002 20.25ZM12.5002 21.75C11.9986 21.75 11.5303 22.0007 11.2521 22.4179L7.25208 28.4179C6.79256 29.1072 6.97882 30.0385 7.66811 30.4981C8.3574 30.9576 9.28871 30.7713 9.74823 30.0821L11.0002 28.2042V37.25C11.0002 38.0784 11.6717 38.75 12.5002 38.75C13.3286 38.75 14.0002 38.0784 14.0002 37.25V32.25H16.0002V37.25C16.0002 38.0784 16.6717 38.75 17.5002 38.75C18.3286 38.75 19.0002 38.0784 19.0002 37.25V28.2042L20.2521 30.0821C20.7116 30.7713 21.6429 30.9576 22.3322 30.4981C23.0215 30.0385 23.2078 29.1072 22.7482 28.4179L18.7482 22.4179C18.47 22.0007 18.0017 21.75 17.5002 21.75H12.5002Z"/>
                             <path fill-rule="evenodd" clip-rule="evenodd" d="M37.0002 10.4055C37.0002 10.1078 36.6596 9.91179 36.3646 10.0399L33.0002 11.5L29.6357 10.0399C29.3408 9.91179 29.0002 10.1078 29.0002 10.4055V12.5945C29.0002 12.8923 29.3408 13.0881 29.6357 12.9602L33.0002 11.5L36.3646 12.9602C36.6596 13.0881 37.0002 12.8923 37.0002 12.5945V10.4055ZM33.0002 20.25C34.9332 20.25 36.5002 18.683 36.5002 16.75C36.5002 14.817 34.9332 13.25 33.0002 13.25C31.0672 13.25 29.5002 14.817 29.5002 16.75C29.5002 18.683 31.0672 20.25 33.0002 20.25ZM30.5002 21.75C29.9986 21.75 29.5303 22.0007 29.2521 22.4179L25.2521 28.4179C24.7926 29.1072 24.9788 30.0385 25.6681 30.4981C26.3574 30.9576 27.2887 30.7713 27.7482 30.0821L29.0002 28.2042V30L27.0002 34H29.0002V37.25C29.0002 38.0784 29.6717 38.75 30.5002 38.75C31.3286 38.75 32.0002 38.0784 32.0002 37.25V34H34.0002V37.25C34.0002 38.0784 34.6717 38.75 35.5002 38.75C36.3286 38.75 37.0002 38.0784 37.0002 37.25V34H39.0002L37.0002 30V28.2042L38.2521 30.0821C38.7116 30.7713 39.6429 30.9576 40.3322 30.4981C41.0215 30.0385 41.2078 29.1072 40.7482 28.4179L36.7482 22.4179C36.47 22.0007 36.0017 21.75 35.5002 21.75H30.5002Z"/>
                         </svg>
-                        <h4 class="">Enfants et ados<br/><br/></h4>
+                        <h4 class="">Enfants et ados<br/></h4>
                         <p class="">Pour les aider à mieux se connaitre et à reprendre la main sur ce qui est compliqué pour eux.</p>
                     </div>
                     <div class="carte-thematique">
@@ -182,7 +206,7 @@
                                 </g>
                             </g>
                         </svg>
-                        <h4 class="">Phobies<br/><br/></h4>
+                        <h4 class="">Phobies<br/></h4>
                         <p class="">Quand on a beau raisonner et que la peur prend quand même trop de place…comment retrouver du confort ?</p>
                     </div>
                     <div class="carte-thematique">
@@ -213,10 +237,29 @@
                 </div>
             </div>
         </section>
+        <section class="quote" id="">
+            <div class="section-container">
+                <div class="carte-temoignage">
+                    <span class="guillemet-ouvrant">
+                        <svg class="svg-guillemet-ouvrant" viewBox="0 0 409.294 409.294" id="svg-6c4a">
+                            <path d="m0 204.647v175.412h175.412v-175.412h-116.941c0-64.48 52.461-116.941 116.941-116.941v-58.471c-96.728 0-175.412 78.684-175.412 175.412z"></path>
+                            <path d="m409.294 87.706v-58.471c-96.728 0-175.412 78.684-175.412 175.412v175.412h175.412v-175.412h-116.941c0-64.48 52.461-116.941 116.941-116.941z"></path>
+                        </svg>
+                    </span>
+                    <p class="">“Un coup de pouce est le bienvenu pour vous aider à vivre mieux !”</p>
+                    <span class="guillemet-fermant">
+                        <svg class="svg-guillemet-fermant" viewBox="0 0 409.294 409.294" id="svg-daee">
+                            <path d="m0 204.647v175.412h175.412v-175.412h-116.941c0-64.48 52.461-116.941 116.941-116.941v-58.471c-96.728 0-175.412 78.684-175.412 175.412z"></path>
+                            <path d="m409.294 87.706v-58.471c-96.728 0-175.412 78.684-175.412 175.412v175.412h175.412v-175.412h-116.941c0-64.48 52.461-116.941 116.941-116.941z"></path>
+                        </svg>
+                    </span>
+                </div>
+            </div>
+        </section>
         <section id="testimonials">
             <!--heading--->
             <div class="testimonial-heading">
-                <h3 class="">Un coup de pouce est le bienvenu pour vous aider à vivre mieux !</h3>
+                <!-- <h3 class="">Un coup de pouce est le bienvenu pour vous aider à vivre mieux !</h3> -->
                 <h2>Vous m’avez fait confiance :</h2>
             </div>
             <!--testimonials-box-container------>
@@ -343,7 +386,7 @@
                 </div>
             </div>
         </section>
-        <section id="section2">
+        <section id="vers-outil">
             <div class="section-container">
                 <div x-data="{ shown: false }" x-intersect:enter="shown = true" x-intersect:leave="shown = false" class="svg-container">
                     <svg x-show="shown" x-transition class="fadeinleft" viewBox="0 0 160 160" x="0px" y="0px" id="svg-1670" style="enable-background:new 0 0 160 160;">
@@ -354,48 +397,25 @@
                 </div>
                 <div class="section-content">
                     <div class="photo-container">
-                        <img class="" src="./ressources/images/20230429_184104.jpg" alt="">
+                        <!-- <img class="" src="./ressources/images/20230429_184104.jpg" alt=""> -->
                     </div>
                     <div class="text-container">
-                        <h2 class="">On a tous la possibilité de vivre mieux</h2>
-                        <p class="">Mes expériences professionnelles et personnelles m’ont amené à comprendre que pour qu’une situation évolue, il est nécessaire que la personne qui vit cette situation souhaite réellement que les choses changent et qu’elle fasse une démarche pour elle-même. 
-                            La possibilité de progression est bien plus importante lorsque la personne est engagée, mobilisée face à ce qu’elle traverse.
-                            Je pense que nous sommes les mieux placés pour comprendre et agir sur ce qui se passe en nous. Je crois aux potentiels de chacun et qu’il est possible de vivre mieux afin de prendre les directions qui nous correspondent.
-                            Nous sommes le pilote de notre vie mais parfois il peut nous arriver de perdre le contrôle comme si c’était quelqu’un d’autre ou autre chose qui tenait les commandes. Nous avons beau appuyer sur tous les boutons, nous n’arrivons plus à diriger…
-                            C’est là, que mon accompagnement et mon soutien peuvent vous aider à mieux vous comprendre et vous permettre de retrouver vos capacités d’agir dans le sens souhaité.
-                            Chacun a en lui tout le nécessaire pour trouver sa direction et j’ai à cœur d’aider les adultes, les parents et les plus jeunes à comprendre et à ressentir qu’ils ont la possibilité d’agir sur ce qui est difficile pour eux.
-                            </p>
+                        <h2 class="">Il arrive un moment où changer devient une nécessité.</h2>
+                        <!-- <h3>Il arrive un moment ou changer devient une nécessité.</h3> -->
+                        <button class="btn">
+                            <a href="./mes-outils.html">En savoir plus</a>
+                        </button>
                         <img class="shape" src="./ressources/images/Untitled-1.png" alt="">
                     </div>
                 </div>
             </div>
         </section>
-        <!-- <section id="section4">
+        <!-- <section id="fading-img">
             <div x-data="{ shown: false }" x-intersect:enter="shown = true" x-intersect:leave="shown = false" class="section-container ">
               <img x-show="shown" x-transition class="fadeintop" src="./ressources/images/istockphoto-875331434-1024x1024.jpg" alt="" >
               <h2 class=""></h2>
             </div>
         </section> -->
-
-        <section class="" id="section6">
-            <div class="section-container">
-                <div class="carte-temoignage">
-                    <span class="guillemet-ouvrant">
-                        <svg class="svg-guillemet-ouvrant" viewBox="0 0 409.294 409.294" id="svg-6c4a">
-                            <path d="m0 204.647v175.412h175.412v-175.412h-116.941c0-64.48 52.461-116.941 116.941-116.941v-58.471c-96.728 0-175.412 78.684-175.412 175.412z"></path>
-                            <path d="m409.294 87.706v-58.471c-96.728 0-175.412 78.684-175.412 175.412v175.412h175.412v-175.412h-116.941c0-64.48 52.461-116.941 116.941-116.941z"></path>
-                        </svg>
-                    </span>
-                    <p class="">“Chacun a en lui tout le nécessaire pour trouver sa direction”</p>
-                    <span class="guillemet-fermant">
-                        <svg class="svg-guillemet-fermant" viewBox="0 0 409.294 409.294" id="svg-daee">
-                            <path d="m0 204.647v175.412h175.412v-175.412h-116.941c0-64.48 52.461-116.941 116.941-116.941v-58.471c-96.728 0-175.412 78.684-175.412 175.412z"></path>
-                            <path d="m409.294 87.706v-58.471c-96.728 0-175.412 78.684-175.412 175.412v175.412h175.412v-175.412h-116.941c0-64.48 52.461-116.941 116.941-116.941z"></path>
-                        </svg>
-                    </span>
-                </div>
-            </div>
-        </section>
 
         <section id="FAQ">
             <div class="section-container">
@@ -457,9 +477,28 @@
                 </div>
             </div>
         </section>
-        <section id="section5">
+        <section class="quote" id="quote3">
+            <div class="section-container">
+                <div class="carte-temoignage">
+                    <span class="guillemet-ouvrant">
+                        <svg class="svg-guillemet-ouvrant" viewBox="0 0 409.294 409.294" id="svg-6c4a">
+                            <path d="m0 204.647v175.412h175.412v-175.412h-116.941c0-64.48 52.461-116.941 116.941-116.941v-58.471c-96.728 0-175.412 78.684-175.412 175.412z"></path>
+                            <path d="m409.294 87.706v-58.471c-96.728 0-175.412 78.684-175.412 175.412v175.412h175.412v-175.412h-116.941c0-64.48 52.461-116.941 116.941-116.941z"></path>
+                        </svg>
+                    </span>
+                    <p class="">“Chacun a en lui tout le nécessaire pour trouver sa direction”</p>
+                    <span class="guillemet-fermant">
+                        <svg class="svg-guillemet-fermant" viewBox="0 0 409.294 409.294" id="svg-daee">
+                            <path d="m0 204.647v175.412h175.412v-175.412h-116.941c0-64.48 52.461-116.941 116.941-116.941v-58.471c-96.728 0-175.412 78.684-175.412 175.412z"></path>
+                            <path d="m409.294 87.706v-58.471c-96.728 0-175.412 78.684-175.412 175.412v175.412h175.412v-175.412h-116.941c0-64.48 52.461-116.941 116.941-116.941z"></path>
+                        </svg>
+                    </span>
+                </div>
+            </div>
+        </section>
+        <!-- <section id="carrousel">
             <div class="section-container-large">
-                <!-- <div class="carte-carrousel">
+                <div class="carte-carrousel">
                   <div class="img-container">
                     <img class="carrousel-img1" src="./ressources/images/enfant_volant.jpg">
                   </div>
@@ -467,7 +506,7 @@
                     <h3 class=""></h3>
                     <p class=""></p>
                   </div>
-                </div> -->
+                </div>
                 <div class="carte-carrousel">
                   <div class="img-container">
                     <img class="carrousel-img2" src="./ressources/images/flower-g4b4cc7d46_1280.jpg">
@@ -497,8 +536,8 @@
                 </div>
               </div>
             </div>
-        </section>
-        <section class="" id="section7">
+        </section> -->
+        <section class="" id="pricing">
             <div class="section-container">
                 <svg class="photo-deco" xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 50 50" viewBox="0 0 50 50"><path d="m8.3 15.8c-2.3 4.3-3.8 9.7-1.8 14.5 1.2 2.7 3.2 4.9 5.5 6.7 2.2 1.7 4.6 3.4 7.2 4.4.4.1.8.3 1.1.4-2.6-.2-5.2-.8-7.5-1.8-2-.8-3.9-2-5.4-3.7-1.6-1.8-2.4-4.2-3.1-6.5-.5-1.9-1.6-5.2.5-6.5.5-.3-.8-1.8-1.4-1.5-2.7 1.7-1.4 5.1-.7 7.5.8 2.8 2 5.4 3.9 7.6 3.7 4.2 9.4 6.2 14.8 6.6 2.6.2 5.3 0 7.8-.8 2.8-.9 5.1-2.6 7.1-4.8 1.9-2.2 3.6-4.7 5-7.3 1.3-2.4 2.2-5.1 2.2-7.9.2-11.3-12.5-19.6-23.1-17.4-5.6 1.1-9.6 5.6-12.1 10.5zm12.4-8.4c4.4-1.3 9.5-.4 13.5 1.8 3.9 2.1 6.8 5.8 7.5 10.2.7 4.8-1.5 9.2-4 13-1.4 2.2-3 4.3-5 5.9-1.8 1.5-3.9 2.5-6.2 2.9.1 0 .2-.1.3-.1 2.5-1.2 4.6-3.2 6.3-5.4 1.8-2.3 3-5 3.8-7.8.7-2.5 1.1-5.2.6-7.7-.6-2.8-2.1-5.2-4.2-7.1-1.9-1.8-4.4-3.8-7.1-4-2.6-.1-4.8 1.5-6.7 3.1-2.3 2.1-4.3 4.5-5.8 7.3-1.2 2.2-2.1 4.7-1.5 7.2.6 2.6 2.4 4.7 4.5 6.3 3.7 3 9.5 5 13.3 1.1 1.9-1.9 3.2-4.7 3.9-7.2.7-2.4.7-5-.6-7.3-1.2-2.1-3.3-3.8-5.8-3.8-2.6 0-5.1 1.6-6.4 3.7s-1.5 4.7-.5 6.9c1 2.1 3.1 3.7 5.5 3.8 2.3.1 4.3-1.2 5-3.4s-.5-4.7-2.7-5.6c-2.1-.9-4.7.7-4.1 3.1.4 1.8 2.8 3.2 4.3 1.7 1.4-1.4-.2-3.5-1.8-3.9 1.1-.3 2.4 0 3 1.1 1 1.8 0 4.1-1.5 5.2-1.7 1.2-4.4 1-5.8-.5-1.5-1.6-1.6-4.1-.8-6 .9-2.2 2.9-3.9 5.1-4.5s4.3.1 5.4 2.1 1 4.4.4 6.5c-1.2 4.2-4 9.3-9 9.1-2-.1-4-.9-5.7-1.9-1.9-1.2-3.7-2.8-4.2-5-.5-2.1.1-4.3 1.1-6.1 1.1-2.3 2.7-4.3 4.4-6.2 1.6-1.7 3.5-3.5 5.7-4.3s4.2-.1 6.1 1.2c1.9 1.4 3.6 3.2 4.5 5.5.7 2.1.7 4.3.3 6.4-.8 4.8-3.3 9.5-6.9 12.7-1.6 1.5-3.6 2.7-5.7 3-2.3.4-4.6-.4-6.6-1.5-4-2.2-8.2-5.3-9-10.1-.7-4.2.9-8.6 3-12.2 2.1-4.2 5.5-7.9 10.1-9.2zm5.9 14.6c0 .2.3.5.5.5 1.3.3 1.6 1.7.6 2.6-.9.7-2.3.7-2.5-.6-.3-1.2.4-2.1 1.4-2.5z"/></svg>
                 <h6 class="">Mes tarifs</h6>
@@ -586,12 +625,14 @@
         </section>
         <section id="contact">
             <div x-data="{ shown: false }" x-intersect:enter="shown = true" x-intersect:leave="shown = false" class="section-container contact-container">
-                <div>
-                    <h4>Contactez Moi</h4>
+                <div class="form-title-container">
+                    <h4>Une question, une demande de rendez-vous ? Contactez-moi, je vous répondrai rapidement.</h4>
+                    <h5>N’hésitez pas à me joindre directement au 07.82.90.54.86</h5>
                 </div>
                 <div x-show="shown" x-transition class="formulaire_formContainer fadeinform">
                     <form action="https://postmail.invotes.com/send" method="post" id="email_form" class="formulaire">
-
+                        <!-- <h5>Une question, une demande de rendez-vous ? Contactez-moi, je vous répondrai rapidement.</h5>
+                        <h6>N’hésitez pas à me joindre directement au 07.82.90.54.86</h6> -->
                         <!-- <input type="text" name="subject" placeholder="Titre de votre message*" required="required" /> -->
                         <input type="hidden" name="access_token" value="9q5q9g54si05i7na3mm8074h" />
                           <!-- return urls can be fully qualified -OR-
@@ -633,7 +674,7 @@
         height="300"
         frameborder="0" style="border:0"
         referrerpolicy="no-referrer-when-downgrade"
-        src="https://www.google.com/maps/embed/v1/place?key=AIzaSyD4aIfm4rBQXaonDTEiw7hmBBXQ1VbNubo&q=1791+Maréchal+Juin+Mont+de+Marsan"
+        src="https://www.google.com/maps/embed/v1/place?key=AIzaSyD4aIfm4rBQXaonDTEiw7hmBBXQ1VbNubo&q=1486+Houga+Mont+de+Marsan"
         allowfullscreen>
         </iframe>
         <div class="bottom-bar">

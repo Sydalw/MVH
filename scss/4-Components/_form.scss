@@ -1,21 +1,27 @@
 #contact {
     background-image: linear-gradient(0deg,rgba(0,0,0,.15),rgba(0,0,0,.15)),url("../ressources/images/christina-wocintechchat-com-LQ1t-8Ms5PY-unsplash.jpeg");
     height:86rem;
+    width:100%;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50% 50%;
 
     .contact-container {
         height: 100%;
+        width:100%;
         display:flex;
         flex-direction: column;
         justify-content: space-evenly;
         margin: auto;    
         
-        h4 {
-            text-align: center;
-            color:#fff;
-            text-transform: uppercase;
+        .form-title-container {
+            background-image: linear-gradient(0deg,rgba(0,0,0,.55),rgba(0,0,0,.55));
+            width:100%;
+            h4, h5 {
+                text-align: center;
+                color:#fff;
+                text-transform: uppercase;
+            }
         }
 
         .formulaire_formContainer {
@@ -33,10 +39,16 @@
             
                 input {
                     margin: 2rem 0;
-                    
+
                     &[type="text"] {
                         height: 5rem;
                         padding-left: 1rem;
+                        font-size: 1.4rem;
+
+                        &::placeholder {
+                            font-family: 'Helvetica Neue', 'Comfortaa';
+                            font-size: 1.4rem;
+                        } 
             
                         &:focus {
                             outline: none;
@@ -55,9 +67,11 @@
                     height: 20rem;
                     outline: none;
                     padding: 1rem 0 0 1rem;
+                    font-size: 1.4rem;
             
                     &::placeholder {
                         font-family: 'Helvetica Neue', 'Comfortaa';
+                        font-size: 1.4rem;
                     } 
                     &:focus {
                         outline: none;

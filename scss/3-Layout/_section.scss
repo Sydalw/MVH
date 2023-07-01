@@ -3,9 +3,31 @@
     margin: 0 auto;
 }
 
-#section1 {
-    height:auto;
+#thematiques {
 
+    height:100rem;
+    margin-bottom: 5rem;
+    @media (max-width: 76.8rem) {
+        height:auto;
+    }
+
+    &::before {
+        content:"";
+        background-image: url("../ressources/images/4b6b07a8-483b-492a-a9db-633b0e4dbe6b.png");
+        background-repeat: no-repeat;
+        background-position: 42% 0%;
+        background-size: 70%;
+        opacity: 0.1;
+        z-index: -10;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+
+        @media (max-width: 1228px) {
+            display:none;
+        }
+
+    }
         h2, h3, h4, p {
             text-align: center;
             font-weight: 700;
@@ -16,26 +38,64 @@
             font-size: 2.25rem;
         }
         .section-header {
-            margin:7rem 0 0 0;
+            //margin:7rem 0 0 0;
+            position: relative;
+            top:40rem;
+            left:0rem;
+            @media (max-width: 76.8rem) {
+                margin:7rem 0 0 0;
+                position: static;
+            }
         }
 
     .section-content {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        
-        .carte-thematique {
-            width:min(25rem,100%);
-            flex-grow: 1;
-            margin: 3rem 1rem;
-            padding: 0 1rem;
+        @media (max-width: 76.8rem) {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            height: auto;
+        }
 
-            img {
-                height:8rem;
-                width: 8rem;
-                margin: 0 auto;
+        position: relative;
+        height:100rem;
+        &::before {
+            @media (max-width: 1228px) {
+                content:"";
+                background-image: url("../ressources/images/4b6b07a8-483b-492a-a9db-633b0e4dbe6b.png");
+                background-repeat: no-repeat;
+                background-position: 42% 0%;
+                background-size: 90%;
+                opacity: 0.1;
+                z-index: -10;
+                position: absolute;
+                width: 100%;
+                height: 100%;
             }
+            @media (max-width: 640px) {
+                display:none;
+            }
+        }
+
+        .carte-thematique {
+            @media (max-width: 76.8rem) {
+                position: static;
+                //width:25rem;
+                margin: 3rem 1rem;
+                height: auto;
+            }
+            position: absolute;
+            top:0;
+            left:0;
+
+            width:min(30rem,100%);
+            //width:25rem;
+            //margin: 3rem 1rem;
+            padding: 0 1rem;
+            @media (max-width: 45rem) {
+                flex-grow: 1;
+            }
+
             svg {
                 fill:var(--p-spanned-color);
                 height:7rem;
@@ -56,7 +116,7 @@
     }
 }
 
-#section2 {
+#vers-outil {
 
     margin: 0;
     @media (max-width: 76.8rem) {
@@ -97,18 +157,22 @@
         }
 
         .photo-container {
-            img {
+            //img {
+                background-image: linear-gradient(0deg,rgba(0,0,0,.25),rgba(0,0,0,.25)),url("../ressources/images/20230429_184104.jpg");
                 width:45rem;
                 height: 55rem;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: 50% 100%;
+                // @media (max-width: 76.8rem) {
+                //     width:25rem;
+                //     height: auto;
+                // }
                 @media (max-width: 76.8rem) {
-                    width:25rem;
-                    height: auto;
-                }
-                @media (max-width: 45rem) {
                     width:90%;
                     margin:0 auto;
                 }
-            }
+            //}
         }
 
         .text-container {
@@ -118,11 +182,11 @@
             align-items: center;
             margin: 10rem 0 10rem 10rem;
 
+            // @media (max-width: 76.8rem) {
+            //         margin: 5rem 0 5rem 5rem;
+            //         width: calc(100% - 35rem);
+            //     }
             @media (max-width: 76.8rem) {
-                    margin: 5rem 0 5rem 5rem;
-                    width: calc(100% - 35rem);
-                }
-            @media (max-width: 45rem) {
                 width:90%;
                 margin: 5rem auto;;
             }
@@ -130,14 +194,19 @@
             h2 {
                 line-height: 1.2;
                 font-weight: 700;
+                text-align: center;
             }
-
+            h3 {
+                text-align: center;
+            }
             p {
                 color:#999;
                 margin:2rem 0;
                 text-overflow: clip;
             }
-
+            button {
+                margin:3rem
+            }
             img {
                 display: block;
                 width:min(21rem,10vw);
@@ -148,7 +217,7 @@
     }
 }
 
-#section4 {
+#fading-img {
     
     background-color: var(--nav-bg);
         img {
@@ -158,7 +227,7 @@
 }
 
 
-#section5 {
+#carrousel {
 
     height: 40rem;
     margin: 0;
@@ -250,9 +319,20 @@
     }
 }
 
-#section6 {
+
+.quote {
 
     background-color: var(--nav-bg);
+    
+    &#quote3 {
+        background-color:var(--cambridge-blue50);
+        .svg-guillemet-ouvrant {
+            fill:var(--atomic-tangerine);
+        }
+        .svg-guillemet-fermant {
+            fill:var(--atomic-tangerine);
+        }
+    }
 
     .section-container {
         p {
@@ -296,7 +376,7 @@
 }
 
 
-#section7 {
+#pricing {
 
     margin: 10rem 0;
 
@@ -318,7 +398,7 @@
         }
 
         .photo-deco {
-            fill:var(--indian-red);
+            fill:var(--cambridge-blue);
             position: relative;
             margin-bottom: -10%;
             height: 20rem;
@@ -343,7 +423,7 @@
 
                     svg {
                         height: 100%;
-                        fill:var(--indian-red);
+                        fill:var(--cambridge-blue);
                     }
                 }
                 
