@@ -15,8 +15,8 @@
         content:"";
         background-image: url("../ressources/images/4b6b07a8-483b-492a-a9db-633b0e4dbe6b.png");
         background-repeat: no-repeat;
-        background-position: 42% 0%;
-        background-size: 70%;
+        background-position: 50% 0%;
+        background-size: 95rem;
         opacity: 0.1;
         z-index: -10;
         position: absolute;
@@ -41,7 +41,7 @@
             //margin:7rem 0 0 0;
             position: relative;
             top:40rem;
-            left:0rem;
+            left:2rem;
             @media (max-width: 76.8rem) {
                 margin:7rem 0 0 0;
                 position: static;
@@ -87,6 +87,7 @@
             position: absolute;
             top:0;
             left:0;
+            z-index: -1;
 
             width:min(30rem,100%);
             //width:25rem;
