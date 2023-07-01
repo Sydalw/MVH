@@ -867,6 +867,15 @@ nav ul li a {
 .quote {
   background-color: var(--nav-bg);
 }
+.quote#quote2 {
+  background-color: var(--indian-red50);
+}
+.quote#quote2 .svg-guillemet-ouvrant {
+  fill: var(--cambridge-blue);
+}
+.quote#quote2 .svg-guillemet-fermant {
+  fill: var(--cambridge-blue);
+}
 .quote#quote3 {
   background-color: var(--cambridge-blue50);
 }

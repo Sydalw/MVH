@@ -324,6 +324,16 @@
 
     background-color: var(--nav-bg);
     
+    &#quote2 {
+        background-color:var(--indian-red50);
+        .svg-guillemet-ouvrant {
+            fill:var(--cambridge-blue);
+        }
+        .svg-guillemet-fermant {
+            fill:var(--cambridge-blue);
+        }
+    }
+
     &#quote3 {
         background-color:var(--cambridge-blue50);
         .svg-guillemet-ouvrant {
