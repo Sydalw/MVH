@@ -526,7 +526,7 @@ nav ul li a {
 
 .navigationCheckbox:checked ~ .list-nav {
   display: block;
-  transform: translateY(53rem);
+  transform: translateY(52.7rem);
 }
 @media screen and (min-width: 65rem) {
   .navigationCheckbox:checked ~ .list-nav {
@@ -671,49 +671,15 @@ nav ul li a {
   margin: 2rem 0 0 0;
 }
 
-#vers-outil {
+.grosse-carte {
   margin: 0;
 }
 @media (max-width: 76.8rem) {
-  #vers-outil {
+  .grosse-carte {
     margin: 15rem 5rem 0;
   }
 }
-#vers-outil svg {
-  fill: var(--indian-red);
-  height: 40rem;
-  position: relative;
-  margin-top: -25rem;
-  bottom: -25rem;
-  left: -3rem;
-  z-index: -50;
-}
-@media (max-width: 76.8rem) {
-  #vers-outil svg {
-    height: 20rem;
-    bottom: -15rem;
-  }
-}
-@media (max-width: 45rem) {
-  #vers-outil svg {
-    height: 40rem;
-    left: -3rem;
-    bottom: -30rem;
-    margin-top: -45rem;
-  }
-}
-#vers-outil .section-content {
-  display: flex;
-  flex-direction: row;
-  flex: 1 1 auto;
-  flex-wrap: wrap;
-}
-@media (max-width: 45rem) {
-  #vers-outil .section-content {
-    flex-direction: column;
-  }
-}
-#vers-outil .section-content .photo-container {
+.grosse-carte#vers-outil .photo-container {
   background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("../ressources/images/20230429_184104.jpg");
   width: 45rem;
   height: 55rem;
@@ -722,12 +688,66 @@ nav ul li a {
   background-position: 50% 100%;
 }
 @media (max-width: 76.8rem) {
-  #vers-outil .section-content .photo-container {
+  .grosse-carte#vers-outil .photo-container {
     width: 90%;
     margin: 0 auto;
   }
 }
-#vers-outil .section-content .text-container {
+.grosse-carte#vers-outil svg {
+  fill: var(--indian-red);
+}
+.grosse-carte#pitch .photo-container {
+  background-image: url("../ressources/images/CA9A9730 - Magalie Villora - 12.jpeg");
+  width: 45rem;
+  height: 55rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 100%;
+  border-radius: 50%;
+}
+@media (max-width: 76.8rem) {
+  .grosse-carte#pitch .photo-container {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+.grosse-carte#pitch svg {
+  fill: var(--cambridge-blue);
+}
+.grosse-carte svg {
+  height: 40rem;
+  position: relative;
+  margin-top: -25rem;
+  bottom: -25rem;
+  left: -3rem;
+  z-index: -50;
+}
+@media (max-width: 76.8rem) {
+  .grosse-carte svg {
+    height: 20rem;
+    bottom: -15rem;
+  }
+}
+@media (max-width: 45rem) {
+  .grosse-carte svg {
+    height: 40rem;
+    left: -3rem;
+    bottom: -30rem;
+    margin-top: -45rem;
+  }
+}
+.grosse-carte .section-content {
+  display: flex;
+  flex-direction: row;
+  flex: 1 1 auto;
+  flex-wrap: wrap;
+}
+@media (max-width: 45rem) {
+  .grosse-carte .section-content {
+    flex-direction: column;
+  }
+}
+.grosse-carte .section-content .text-container {
   display: flex;
   flex-direction: column;
   width: min(50rem, 100%);
@@ -735,28 +755,28 @@ nav ul li a {
   margin: 10rem 0 10rem 10rem;
 }
 @media (max-width: 76.8rem) {
-  #vers-outil .section-content .text-container {
+  .grosse-carte .section-content .text-container {
     width: 90%;
     margin: 5rem auto;
   }
 }
-#vers-outil .section-content .text-container h2 {
+.grosse-carte .section-content .text-container h2 {
   line-height: 1.2;
   font-weight: 700;
   text-align: center;
 }
-#vers-outil .section-content .text-container h3 {
+.grosse-carte .section-content .text-container h3 {
   text-align: center;
 }
-#vers-outil .section-content .text-container p {
+.grosse-carte .section-content .text-container p {
   color: #999;
   margin: 2rem 0;
   text-overflow: clip;
 }
-#vers-outil .section-content .text-container button {
+.grosse-carte .section-content .text-container button {
   margin: 3rem;
 }
-#vers-outil .section-content .text-container img {
+.grosse-carte .section-content .text-container img {
   display: block;
   width: min(21rem, 10vw);
   position: relative;
@@ -1079,7 +1099,7 @@ button:hover, .btn:hover {
 }
 
 #contact {
-  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), url("../ressources/images/christina-wocintechchat-com-LQ1t-8Ms5PY-unsplash.jpeg");
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), url("../ressources/images/bureau.jpg");
   height: 86rem;
   width: 100%;
   background-repeat: no-repeat;
