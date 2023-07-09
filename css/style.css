@@ -618,7 +618,7 @@ nav ul li a {
   }
 }
 @media (max-width: 1228px) {
-  #thematiques .section-content::after {
+  #thematiques .section-content::before {
     content: "";
     background-image: url("../ressources/images/4b6b07a8-483b-492a-a9db-633b0e4dbe6b.png");
     background-repeat: no-repeat;
@@ -632,7 +632,7 @@ nav ul li a {
   }
 }
 @media (max-width: 640px) {
-  #thematiques .section-content::after {
+  #thematiques .section-content::before {
     display: none;
   }
 }
@@ -656,14 +656,12 @@ nav ul li a {
   fill: var(--atomic-tangerine);
   transition: all 0.3s ease 0s;
 }
-#thematiques .section-content .carte-thematique a::before {
+#thematiques .section-content .carte-thematique a::after {
   bottom: 0;
   content: "";
   left: 0;
   position: absolute;
-  right: -100%;
-  top: -100%;
-  z-index: 1000;
+  z-index: 500;
 }
 @media (max-width: 76.8rem) {
   #thematiques .section-content .carte-thematique {

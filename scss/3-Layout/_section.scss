@@ -61,7 +61,7 @@
         position: relative;
         height:100rem;
         
-        &::after {
+        &::before {
             @media (max-width: 1228px) {
                 content:"";
                 background-image: url("../ressources/images/4b6b07a8-483b-492a-a9db-633b0e4dbe6b.png");
@@ -88,6 +88,7 @@
             border-radius: 2rem;
             cursor: pointer;
             box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
+            
             &:hover {
                 svg {
                     fill:var(--atomic-tangerine);
@@ -97,15 +98,16 @@
                 transition: all 0.3s ease 0s;
                 box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
             }
+            
             a {
-                &::before { 
+                &::after { 
                     bottom: 0;
                     content: "";
                     left: 0;
                     position: absolute;
-                    right: -100%;
-                    top: -100%;
-                    z-index:1000;
+                    //right: -100%;
+                    //top: -100%;
+                    z-index:500;
                 }
             }
             width:min(30rem,100%);
