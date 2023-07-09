@@ -1,0 +1,70 @@
+section.contenu-redactionnel > div {
+    &:first-child {
+        display:flex;
+        flex-direction: row;
+    }
+}
+
+.contenu-redactionnel {
+
+    padding: 5rem 3rem;
+
+
+    h2 {
+        margin: auto 0;
+        padding: 0 2rem;
+    }
+
+    h3 {
+
+    }
+    .image {
+        content:"";
+        border-radius: 50%;
+        background-repeat: no-repeat;
+
+        &#alim {
+            background-image: url("../ressources/images/alim.jpg");
+            background-position: 60% 50%;
+            width:19.7rem;
+            height:19.7rem;
+        }
+        &#situations-douloureuses {
+            background-image: url("../ressources/images/situations-douloureuses.jpg");
+            background-position: 60% 50%;
+            width:13.5rem;
+            height:13.5rem;
+        }
+        &#phobies {
+            background-image: url("../ressources/images/phobies.jpg");
+            background-position: 75% 50%;
+            width:13.5rem;
+            height:13.5rem;
+        }
+        &#emotions {
+            background-image: url("../ressources/images/emotions.jpg");
+            background-position: 75% 50%;
+            width:13.5rem;
+            height:13.5rem;
+        }
+        &#ados-enfants {
+            background-image: url("../ressources/images/ados-enfants.jpg");
+            background-position: 50% 50%;
+            width:13.5rem;
+            height:13.5rem;
+            background-size: cover;
+        }
+    }
+
+    article {
+        margin:2rem 0;
+
+        p {
+            line-height: 3rem;
+            text-align: justify;
+            margin:2rem 0;
+            width: 100%;
+        }
+    }
+
+}
