@@ -2,6 +2,10 @@
 /*
   1. Use a more-intuitive box-sizing model.
 */
+@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cardo:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -169,22 +173,6 @@ p, h1, h2, h3, h4, h5, h6 {
   font-family: "acier";
   src: url("../ressources/fonts/acier-text-solid.ttf");
 }
-@font-face {
-  font-family: "Alegreya sans";
-  src: url("https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;700&display=swap");
-}
-@font-face {
-  font-family: "Open sans";
-  src: url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
-}
-@font-face {
-  font-family: "Cardo";
-  src: url("https://fonts.googleapis.com/css2?family=Cardo:wght@400;700&display=swap");
-}
-@font-face {
-  font-family: "Josefin sans";
-  src: url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
-}
 html {
   font-size: 62.5%;
   font-family: "Open sans", "Josefin sans", "Roboto", "Helvetica Neue", "Comfortaa";
@@ -207,13 +195,13 @@ a {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Playfair Display", serif !important;
+  font-family: "Alegreya sans", "Cardo", "acier", "Playfair Display", serif !important;
 }
 
 h1 {
-  font-family: "Alegryea sans", "Cardo", "acier", "Playfair Display", serif !important;
   color: var(--h1-color);
   font-size: clamp(4.5rem, 6vw, 10rem);
+  font-weight: 700;
 }
 
 h2 {
@@ -242,6 +230,7 @@ h6 {
 }
 
 p {
+  font-family: "Open sans", "Josefin sans", "Roboto", "Helvetica Neue", "Comfortaa";
   font-size: clamp(1.6rem, 1.6vw, 2rem);
   color: var(--p-color);
 }
@@ -296,7 +285,6 @@ p {
   text-align: left;
   color: var(--nav-bg);
   text-transform: uppercase;
-  font-family: "acier", "Playfair Display", serif !important;
   margin: 0 0 0 3rem;
 }
 @media (max-width: 991px) {
@@ -647,20 +635,26 @@ nav ul li a {
   width: min(30rem, 100%);
   padding: 0 1rem;
 }
+#thematiques .section-content .carte-thematique .interieur-carte {
+  position: relative;
+}
 #thematiques .section-content .carte-thematique:hover {
   top: 2rem;
   transition: all 0.3s ease 0s;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+  transform: translateY(-1rem);
 }
 #thematiques .section-content .carte-thematique:hover svg {
   fill: var(--atomic-tangerine);
-  transition: all 0.3s ease 0s;
+  transition: all 0.3s ease;
 }
 #thematiques .section-content .carte-thematique a::after {
-  bottom: 0;
   content: "";
-  left: 0;
   position: absolute;
+  left: 0;
+  bottom: 0;
+  right: -0.1%;
+  top: -0.1%;
   z-index: 500;
 }
 @media (max-width: 76.8rem) {
