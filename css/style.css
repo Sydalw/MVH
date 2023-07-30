@@ -421,13 +421,6 @@ nav .menu-container .list-nav li:hover {
   cursor: pointer;
   color: var(--p-spanned-color);
 }
-nav .menu-container .list-nav li.deroulant:hover {
-  background-color: aqua;
-}
-nav .menu-container .list-nav li.deroulant:hover ~ .sous-menu {
-  display: flex;
-  flex-direction: column;
-}
 @media screen and (max-width: 65rem) {
   nav .menu-container .list-nav li {
     line-height: 10rem;
@@ -437,23 +430,50 @@ nav .menu-container .list-nav li.deroulant:hover ~ .sous-menu {
   }
   nav .menu-container .list-nav li:hover {
     cursor: pointer;
-    background-color: var(--couleur2);
-    color: var(--UT-orange);
+    background-color: var(--p-spanned-color);
+    color: #fff;
     border-bottom: 0;
   }
 }
 nav .menu-container .list-nav li a {
   padding: 2rem;
 }
+nav .menu-container .list-nav .deroulant:hover {
+  background-color: aqua;
+}
+nav .menu-container .list-nav .deroulant:hover ~ .sous-menu {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (max-width: 65rem) {
+  nav .menu-container .list-nav .deroulant:hover ~ .sous-menu {
+    position: static;
+    display: block;
+    width: 100%;
+  }
+}
 nav .menu-container .list-nav .sous-menu {
   display: none;
   position: absolute;
   z-index: 1000;
 }
+@media screen and (max-width: 65rem) {
+  nav .menu-container .list-nav .sous-menu {
+    position: static;
+  }
+}
 nav .menu-container .list-nav .sous-menu:hover {
   background-color: aqua;
   display: flex;
   flex-direction: column;
+}
+@media screen and (max-width: 65rem) {
+  nav .menu-container .list-nav .sous-menu:hover {
+    position: static;
+    display: block;
+    width: 100%;
+    background-color: #fff;
+  }
 }
 nav .menu-container .list-nav .sous-menu li {
   position: relative;
@@ -462,9 +482,14 @@ nav .menu-container .list-nav .sous-menu li {
   text-align: left;
   margin-left: 10rem;
 }
-nav .menu-container .list-nav .sous-menu a {
-  padding: 2rem;
-  border-bottom: none;
+@media screen and (max-width: 65rem) {
+  nav .menu-container .list-nav .sous-menu li {
+    margin-left: 0;
+  }
+  nav .menu-container .list-nav .sous-menu li:hover {
+    background-color: var(--p-spanned-color);
+    color: #fff;
+  }
 }
 
 .navigationCheckbox {

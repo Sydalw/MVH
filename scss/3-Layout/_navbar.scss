@@ -64,17 +64,6 @@ nav {
                     cursor: pointer;
                     color: var(--p-spanned-color);
                 }
-                
-                &.deroulant {
-                    &:hover {
-                        background-color: aqua;
-                        &~.sous-menu{
-                            //background-color: aqua;
-                            display: flex;
-                            flex-direction: column;
-                        }
-                    }
-                }
 
                 @media screen and (max-width: 65rem) {
                     line-height: 10rem;
@@ -85,8 +74,8 @@ nav {
                     &:hover {
                         cursor: pointer;
                         //background-color: var(--caribbean-current);
-                        background-color: var(--couleur2);
-                        color: var(--UT-orange);
+                        background-color: var(--p-spanned-color);
+                        color:#fff;
                         border-bottom: 0;
                     }
                 }
@@ -95,17 +84,43 @@ nav {
                 }
             }
 
+            .deroulant {
+                &:hover {
+                    background-color: aqua;
+
+                    &~.sous-menu{
+                        display: flex;
+                        flex-direction: column;
+
+                        @media screen and (max-width: 65rem) {
+                            //display:none;
+                            position: static;
+                            display: block;
+                            width: 100%;;
+                        }
+                    }
+                }
+            }
+
             .sous-menu {
                 display: none;
                 position: absolute;
                 z-index: 1000;
+                @media screen and (max-width: 65rem) {
+                    position: static;
+                }
 
                 &:hover {
                         background-color: aqua;
                         display: flex;
                         flex-direction: column;
+                        @media screen and (max-width: 65rem) {
+                            position: static;
+                            display: block;
+                            width: 100%;
+                            background-color: #fff;
+                        }
                     }
-                
         
                 li{
                     position: relative;
@@ -113,11 +128,14 @@ nav {
                     width: 100%;
                     text-align: left;
                     margin-left:10rem;
-                }
-        
-                a{
-                    padding: 2rem;
-                    border-bottom: none;
+
+                    @media screen and (max-width: 65rem) {
+                        &:hover {
+                            background-color: var(--p-spanned-color);
+                            color:#fff;
+                        }
+                        margin-left:0;
+                    }
                 }
             }
         }
