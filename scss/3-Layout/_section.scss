@@ -6,7 +6,7 @@
 #thematiques {
 
     height:100rem;
-    margin-bottom: 5rem;
+    margin: 5rem 0;
     @media (max-width: 76.8rem) {
         height:auto;
     }
@@ -95,13 +95,19 @@
 
             &:hover {
                 svg {
-                    fill:var(--atomic-tangerine);
+                    //fill:var(--atomic-tangerine);
+                    fill:var(--p-spanned-color);
                     transition: all 0.3s ease;
                 }
                 top:2rem;
                 transition: all 0.3s ease 0s;
                 box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
                 transform: translateY(-1rem);
+                // h4 {
+                //     &:hover {
+                //         color: var(--p-spanned-color);
+                //     }
+                // }
             }
             
             a {
@@ -128,7 +134,8 @@
             }
 
             svg {
-                fill:var(--p-spanned-color);
+                //fill:var(--p-spanned-color);
+                fill:var(--atomic-tangerine);
                 height:7rem;
                 width:7rem;
                 margin: 0 auto;
@@ -137,10 +144,14 @@
                 margin: 3rem 0 0 0;
                 text-transform: uppercase;
                 font-size: clamp(1.4rem, 1.5vw, 2.3rem);
+                //color: var(--atomic-tangerine);
+                color:var(--p-spanned-color);
             }
             p {
-                color:#999;
+                color: var(--p-color);
                 margin: 2rem 0 0 0;
+                font-size: 1.5rem;
+                font-weight: 400;
             }
         }
             
@@ -206,6 +217,9 @@
                 bottom: -25rem;
 
             }
+        }
+        p {
+            color:var(--p-color);
         }
 
     }

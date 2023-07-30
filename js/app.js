@@ -1,7 +1,7 @@
 const cartes = document.getElementsByClassName('carte-thematique');
 
 function positionCercle(element, theta) {
-    element.style.left = 32 + (50 * Math.cos(theta))+'%';
+    element.style.left = 37 + (40 * Math.cos(theta))+'%';
     element.style.top = 22 + (42 * Math.sin(theta))+'%';
 }
 

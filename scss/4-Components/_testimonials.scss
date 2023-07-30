@@ -1,101 +1,105 @@
-#testimonials{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+#testimonials {
+    display:flex;
     flex-direction: column;
-    width:100%;
-    margin:5rem 0;
 
-    .testimonial-heading{
-        letter-spacing: 1px;
-        margin: 3rem 0;
-        padding: 1rem 2rem;
+    input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+        position: absolute;
+      }
+      .wrapper {
+        width: 75vw; /* unfortunately width has to be set to some hard value */
         display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        margin: 0 auto;
+        background-color: white;
+        box-shadow: 3px 3px 20px #9E9E9E;
+        
+        .slide {
+            width: 0;
 
-        h2 {
-            padding: 1rem 2rem;
-        }
-    }
-    .testimonial-box-container{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-        @media (max-width: 1080px) {
-            width:100%;
-        }
+            .content {
+                width: 75vw;
+                height: 100%; /* this is optional if you want every slide to have same height as the highest one */
+                padding: 30px;
+                opacity: 0;
+                pointer-events: none;
+                transition: opacity .6s;
+                max-height: 90vh;
+                overflow-y: auto;
 
-        .testimonial-box {
-            width:40%;
-            box-shadow: 2px 2px 30px rgba(0,0,0,0.1);
-            background-color: #ffffff;
-            padding: 2rem;
-            margin: 1.5rem;
-            cursor: pointer;
-
-            &:hover{
-                transform: translateY(-1rem);
-                transition: all ease 0.3s;
-            }
-
-            @media (max-width: 1199px) {
-                width:35%;
-                padding: 1rem;
-            }
-
-            @media (max-width: 991px) {
-                width:70%;
-                margin: 2rem 2rem;
-            }
-
-            @media (max-width: 767px) {
-
-            }
-            
-            .box-top{
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                margin-bottom: 2rem;
-                
-
-                .profile{
+                .box-top{
                     display: flex;
+                    justify-content: space-between;
                     align-items: center;
-
-                    .name-user{
+                    margin-bottom: 2rem;
+                    
+                
+                    .profile{
                         display: flex;
-                        flex-direction: column;
-
-                        strong{
-                            color: #3d3d3d;
-                            font-size: 1.6rem;
-                            letter-spacing: 0.5px;
-                        }
-                        span {
-                            color: #979797;
-                            font-size: 1.2rem;
+                        align-items: center;
+                
+                        .name-user{
+                            display: flex;
+                            flex-direction: column;
+                
+                            strong{
+                                color: #3d3d3d;
+                                font-size: 1.6rem;
+                                letter-spacing: 0.5px;
+                            }
+                            span {
+                                color: #979797;
+                                font-size: 1.2rem;
+                            }
                         }
                     }
-                }
-                .reviews{
-                    color: #f9d71c;
-
-                    @media (max-width: 575px) {
-                        margin-top: 1rem;
+                    .reviews{
+                        color: #f9d71c;
+                
+                        // @media (max-width: 575px) {
+                        //     margin-top: 1rem;
+                        // }
+                
                     }
+                }
+                .client-comment {
+                    p{
+                    font-size: 1.6rem;
+                    color: #4b4b4b;
+                    }
+                }
+              }
+          }
 
-                }
-            }
-            .client-comment {
-                p{
-                font-size: 1.6rem;
-                color: #4b4b4b;
-                }
-            }
-        }
+
+      }
+      .controls {
+        margin: 2rem auto;
+
+        label {
+            color: #E0E0E0;
+            transition-duration: .6s;
+            cursor: pointer;
+          }
     }
+    #i_1:checked ~ .wrapper .content1,
+    #i_2:checked ~ .wrapper .content2,
+    #i_3:checked ~ .wrapper .content3,
+    #i_4:checked ~ .wrapper .content4,
+    #i_5:checked ~ .wrapper .content5,
+    #i_6:checked ~ .wrapper .content6 {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    #i_1:checked ~ .controls label[for="i_1"],
+    #i_2:checked ~ .controls label[for="i_2"],
+    #i_3:checked ~ .controls label[for="i_3"],
+    #i_4:checked ~ .controls label[for="i_4"],
+    #i_5:checked ~ .controls label[for="i_5"],
+    #i_6:checked ~ .controls label[for="i_6"] {
+        color: #424242;
+    }
+    
 }

@@ -1,4 +1,11 @@
 nav {
+
+    #nav-box-sizer {
+        @media screen and (max-width: 65rem) {
+            display:block;
+        }
+    }
+
     background-color: var(--nav-bg);
     height: 10rem;
     width: 100%;
@@ -26,55 +33,92 @@ nav {
         margin: 5% auto;
     }
 
+    .menu-container {
 
-    #nav-box-sizer {
-        @media screen and (max-width: 65rem) {
-            display:block;
-        }
-    }
+    //     width:100%;
 
-    ul {
-        width: 100%;
-        height: 100%;
-        line-height: 10rem;
-        text-align: center;
-        text-transform: uppercase;
-        color: var(--nav-font-color);
-
-        @media screen and (max-width: 65rem) {
-            display: block;
-            position: relative;
-            top: -53rem;
-            transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
-            //z-index: -10;
-        }
-        li {
-            display: inline-block;
-            list-style-type: none;
-            transition: all 0.2s ease-in-out;
-
-            &:hover {
-                cursor: pointer;
-                border-bottom: 0.5rem solid var(--p-spanned-color);
-                color: var(--p-spanned-color);
+        .list-nav {
+            width: 100%;
+            height: 100%;
+            line-height: 10rem;
+            text-align: center;
+            text-transform: uppercase;
+            color: var(--nav-font-color);
+            
+            @media screen and (max-width: 65rem) {
+                display: block;
+                position: relative;
+                top: -53rem;
+                transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+                //z-index: -10;
             }
 
-            @media screen and (max-width: 65rem) {
-                line-height: 10rem;
-                display: block;
-                margin-left: -4rem;
-                background-color: var(--nav-bg);
+            li {
+                display: inline-block;
+                list-style-type: none;
+                transition: all 0.2s ease-in-out;
+                position: relative;
+                width:auto;
                 
                 &:hover {
                     cursor: pointer;
-                    //background-color: var(--caribbean-current);
-                    background-color: var(--couleur2);
-                    color: var(--UT-orange);
-                    border-bottom: 0;
+                    color: var(--p-spanned-color);
+                }
+                
+                &.deroulant {
+                    &:hover {
+                        background-color: aqua;
+                        &~.sous-menu{
+                            //background-color: aqua;
+                            display: flex;
+                            flex-direction: column;
+                        }
+                    }
+                }
+
+                @media screen and (max-width: 65rem) {
+                    line-height: 10rem;
+                    display: block;
+                    margin-left: -4rem;
+                    background-color: var(--nav-bg);
+                    
+                    &:hover {
+                        cursor: pointer;
+                        //background-color: var(--caribbean-current);
+                        background-color: var(--couleur2);
+                        color: var(--UT-orange);
+                        border-bottom: 0;
+                    }
+                }
+                a {
+                    padding: 2rem;
                 }
             }
-            a {
-                padding: 2rem;
+
+            .sous-menu {
+                display: none;
+                position: absolute;
+                z-index: 1000;
+
+                &:hover {
+                        background-color: aqua;
+                        display: flex;
+                        flex-direction: column;
+                    }
+                
+        
+                li{
+                    position: relative;
+                    background-color: white;
+                    width: 100%;
+                    text-align: left;
+                    margin-left:10rem;
+                }
+        
+                a{
+                    padding: 2rem;
+                    border-bottom: none;
+                }
             }
         }
     }

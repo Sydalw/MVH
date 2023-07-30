@@ -9,9 +9,10 @@
     .contact-container {
         height: 100%;
         width:100%;
-        display:flex;
+        display: flex;
         flex-direction: column;
         justify-content: space-evenly;
+        align-items: center;
         margin: auto;    
         
         .form-title-container {
@@ -29,13 +30,15 @@
             background-color: #fff;
             padding: 5rem;
             border-radius: 5rem;
+            width: 50%;
+            justify-content: center;
+
             @media (max-width: 108rem) {
                 margin: 5rem;
             }
             .formulaire {
                 display: flex;
                 flex-direction: column;
-                width: 100%;
             
                 input {
                     margin: 2rem 0;

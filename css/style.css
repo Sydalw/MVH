@@ -4,8 +4,10 @@
 */
 @import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;700&family=Dancing+Script:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cardo:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -71,7 +73,7 @@ p, h1, h2, h3, h4, h5, h6 {
   --h2-color:#1D1D1B;
   --h3-color:#1D1D1B;
   --h4-color:#1D1D1B;
-  --p-color: #1D1D1B;
+  --p-color: #000;
   --border-color:#F2D7BF;
   --p-spanned-color: #84AA86;
   --accentuated-color:#E62C33;
@@ -99,7 +101,7 @@ p, h1, h2, h3, h4, h5, h6 {
     --h2-color:#1D1D1B;
     --h3-color:#1D1D1B;
     --h4-color:#1D1D1B;
-    --p-color: #1D1D1B;
+    --p-color: #000;
     --p-spanned-color: #84AA86;
     --accentuated-color: #0D5C63;
     --very-accentuated-color: #0D5C63;
@@ -124,7 +126,7 @@ p, h1, h2, h3, h4, h5, h6 {
   --h2-color:#1D1D1B;
   --h3-color:#1D1D1B;
   --h4-color:#1D1D1B;
-  --p-color: #1D1D1B;
+  --p-color: #000;
   --border-color:#F2D7BF;
   --p-spanned-color: #84AA86;
   --accentuated-color:#E62C33;
@@ -152,7 +154,7 @@ p, h1, h2, h3, h4, h5, h6 {
     --h2-color:#1D1D1B;
     --h3-color:#1D1D1B;
     --h4-color:#1D1D1B;
-    --p-color: #1D1D1B;
+    --p-color: #000;
     --p-spanned-color: #84AA86;
     --accentuated-color: #0D5C63;
     --very-accentuated-color: #0D5C63;
@@ -175,7 +177,7 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 html {
   font-size: 62.5%;
-  font-family: "Open sans", "Josefin sans", "Roboto", "Helvetica Neue", "Comfortaa";
+  font-family: "Josefin sans", "Open sans", "Roboto", "Helvetica Neue", "Comfortaa";
   height: 1vh;
 }
 
@@ -195,13 +197,14 @@ a {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Alegreya sans", "Cardo", "acier", "Playfair Display", serif !important;
+  font-family: "Lora", "Alegreya sans", "Dancing Script", "Cardo", "acier", "Playfair Display", serif !important;
 }
 
 h1 {
   color: var(--h1-color);
   font-size: clamp(4.5rem, 6vw, 10rem);
   font-weight: 700;
+  font-style: italic;
 }
 
 h2 {
@@ -220,7 +223,7 @@ h4 {
 }
 
 h5 {
-  font-size: clamp(1.6rem, 1.3vw, 2.5rem);
+  font-size: clamp(1.6rem, 1.8vw, 3.5rem);
   color: var(--h4-color);
 }
 
@@ -372,6 +375,11 @@ nav {
   display: flex;
   justify-content: center;
 }
+@media screen and (max-width: 65rem) {
+  nav #nav-box-sizer {
+    display: block;
+  }
+}
 nav .logo-container {
   width: 7.5rem;
 }
@@ -386,12 +394,7 @@ nav img {
   object-fit: contain;
   margin: 5% auto;
 }
-@media screen and (max-width: 65rem) {
-  nav #nav-box-sizer {
-    display: block;
-  }
-}
-nav ul {
+nav .menu-container .list-nav {
   width: 100%;
   height: 100%;
   line-height: 10rem;
@@ -400,39 +403,68 @@ nav ul {
   color: var(--nav-font-color);
 }
 @media screen and (max-width: 65rem) {
-  nav ul {
+  nav .menu-container .list-nav {
     display: block;
     position: relative;
     top: -53rem;
     transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
   }
 }
-nav ul li {
+nav .menu-container .list-nav li {
   display: inline-block;
   list-style-type: none;
   transition: all 0.2s ease-in-out;
+  position: relative;
+  width: auto;
 }
-nav ul li:hover {
+nav .menu-container .list-nav li:hover {
   cursor: pointer;
-  border-bottom: 0.5rem solid var(--p-spanned-color);
   color: var(--p-spanned-color);
 }
+nav .menu-container .list-nav li.deroulant:hover {
+  background-color: aqua;
+}
+nav .menu-container .list-nav li.deroulant:hover ~ .sous-menu {
+  display: flex;
+  flex-direction: column;
+}
 @media screen and (max-width: 65rem) {
-  nav ul li {
+  nav .menu-container .list-nav li {
     line-height: 10rem;
     display: block;
     margin-left: -4rem;
     background-color: var(--nav-bg);
   }
-  nav ul li:hover {
+  nav .menu-container .list-nav li:hover {
     cursor: pointer;
     background-color: var(--couleur2);
     color: var(--UT-orange);
     border-bottom: 0;
   }
 }
-nav ul li a {
+nav .menu-container .list-nav li a {
   padding: 2rem;
+}
+nav .menu-container .list-nav .sous-menu {
+  display: none;
+  position: absolute;
+  z-index: 1000;
+}
+nav .menu-container .list-nav .sous-menu:hover {
+  background-color: aqua;
+  display: flex;
+  flex-direction: column;
+}
+nav .menu-container .list-nav .sous-menu li {
+  position: relative;
+  background-color: white;
+  width: 100%;
+  text-align: left;
+  margin-left: 10rem;
+}
+nav .menu-container .list-nav .sous-menu a {
+  padding: 2rem;
+  border-bottom: none;
 }
 
 .navigationCheckbox {
@@ -548,7 +580,7 @@ nav ul li a {
 
 #thematiques {
   height: 100rem;
-  margin-bottom: 5rem;
+  margin: 5rem 0;
 }
 @media (max-width: 76.8rem) {
   #thematiques {
@@ -645,7 +677,7 @@ nav ul li a {
   transform: translateY(-1rem);
 }
 #thematiques .section-content .carte-thematique:hover svg {
-  fill: var(--atomic-tangerine);
+  fill: var(--p-spanned-color);
   transition: all 0.3s ease;
 }
 #thematiques .section-content .carte-thematique a::after {
@@ -670,7 +702,7 @@ nav ul li a {
   }
 }
 #thematiques .section-content .carte-thematique svg {
-  fill: var(--p-spanned-color);
+  fill: var(--atomic-tangerine);
   height: 7rem;
   width: 7rem;
   margin: 0 auto;
@@ -679,10 +711,13 @@ nav ul li a {
   margin: 3rem 0 0 0;
   text-transform: uppercase;
   font-size: clamp(1.4rem, 1.5vw, 2.3rem);
+  color: var(--p-spanned-color);
 }
 #thematiques .section-content .carte-thematique p {
-  color: #999;
+  color: var(--p-color);
   margin: 2rem 0 0 0;
+  font-size: 1.5rem;
+  font-weight: 400;
 }
 
 .grosse-carte {
@@ -746,6 +781,9 @@ nav ul li a {
     height: 40rem;
     bottom: -25rem;
   }
+}
+.grosse-carte#pitch p {
+  color: var(--p-color);
 }
 .grosse-carte svg {
   height: 40rem;
@@ -1183,7 +1221,7 @@ button, .btn {
   text-transform: uppercase;
   letter-spacing: 2.5px;
   font-weight: 500;
-  color: #000;
+  color: #fff;
   background-color: var(--indian-red);
   border: none;
   border-radius: 45px;
@@ -1196,7 +1234,7 @@ button, .btn {
 button:hover, .btn:hover {
   background-color: var(--atomic-tangerine);
   box-shadow: 0px 15px 20px rgba(132, 170, 134, 0.4);
-  color: #fff;
+  color: #000;
 }
 
 #contact {
@@ -1213,6 +1251,7 @@ button:hover, .btn:hover {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  align-items: center;
   margin: auto;
 }
 #contact .contact-container .form-title-container {
@@ -1229,6 +1268,8 @@ button:hover, .btn:hover {
   background-color: #fff;
   padding: 5rem;
   border-radius: 5rem;
+  width: 50%;
+  justify-content: center;
 }
 @media (max-width: 108rem) {
   #contact .contact-container .formulaire_formContainer {
@@ -1238,7 +1279,6 @@ button:hover, .btn:hover {
 #contact .contact-container .formulaire_formContainer .formulaire {
   display: flex;
   flex-direction: column;
-  width: 100%;
 }
 #contact .contact-container .formulaire_formContainer .formulaire input {
   margin: 2rem 0;
@@ -1320,93 +1360,90 @@ button:hover, .btn:hover {
 
 #testimonials {
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
-  width: 100%;
-  margin: 5rem 0;
 }
-#testimonials .testimonial-heading {
-  letter-spacing: 1px;
-  margin: 3rem 0;
-  padding: 1rem 2rem;
+#testimonials input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  position: absolute;
+}
+#testimonials .wrapper {
+  width: 75vw;
+  /* unfortunately width has to be set to some hard value */
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  margin: 0 auto;
+  background-color: white;
+  box-shadow: 3px 3px 20px #9E9E9E;
 }
-#testimonials .testimonial-heading h2 {
-  padding: 1rem 2rem;
+#testimonials .wrapper .slide {
+  width: 0;
 }
-#testimonials .testimonial-box-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
+#testimonials .wrapper .slide .content {
+  width: 75vw;
+  height: 100%;
+  /* this is optional if you want every slide to have same height as the highest one */
+  padding: 30px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.6s;
+  max-height: 90vh;
+  overflow-y: auto;
 }
-@media (max-width: 1080px) {
-  #testimonials .testimonial-box-container {
-    width: 100%;
-  }
-}
-#testimonials .testimonial-box-container .testimonial-box {
-  width: 40%;
-  box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.1);
-  background-color: #ffffff;
-  padding: 2rem;
-  margin: 1.5rem;
-  cursor: pointer;
-}
-#testimonials .testimonial-box-container .testimonial-box:hover {
-  transform: translateY(-1rem);
-  transition: all ease 0.3s;
-}
-@media (max-width: 1199px) {
-  #testimonials .testimonial-box-container .testimonial-box {
-    width: 35%;
-    padding: 1rem;
-  }
-}
-@media (max-width: 991px) {
-  #testimonials .testimonial-box-container .testimonial-box {
-    width: 70%;
-    margin: 2rem 2rem;
-  }
-}
-#testimonials .testimonial-box-container .testimonial-box .box-top {
+#testimonials .wrapper .slide .content .box-top {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 2rem;
 }
-#testimonials .testimonial-box-container .testimonial-box .box-top .profile {
+#testimonials .wrapper .slide .content .box-top .profile {
   display: flex;
   align-items: center;
 }
-#testimonials .testimonial-box-container .testimonial-box .box-top .profile .name-user {
+#testimonials .wrapper .slide .content .box-top .profile .name-user {
   display: flex;
   flex-direction: column;
 }
-#testimonials .testimonial-box-container .testimonial-box .box-top .profile .name-user strong {
+#testimonials .wrapper .slide .content .box-top .profile .name-user strong {
   color: #3d3d3d;
   font-size: 1.6rem;
   letter-spacing: 0.5px;
 }
-#testimonials .testimonial-box-container .testimonial-box .box-top .profile .name-user span {
+#testimonials .wrapper .slide .content .box-top .profile .name-user span {
   color: #979797;
   font-size: 1.2rem;
 }
-#testimonials .testimonial-box-container .testimonial-box .box-top .reviews {
+#testimonials .wrapper .slide .content .box-top .reviews {
   color: #f9d71c;
 }
-@media (max-width: 575px) {
-  #testimonials .testimonial-box-container .testimonial-box .box-top .reviews {
-    margin-top: 1rem;
-  }
-}
-#testimonials .testimonial-box-container .testimonial-box .client-comment p {
+#testimonials .wrapper .slide .content .client-comment p {
   font-size: 1.6rem;
   color: #4b4b4b;
+}
+#testimonials .controls {
+  margin: 2rem auto;
+}
+#testimonials .controls label {
+  color: #E0E0E0;
+  transition-duration: 0.6s;
+  cursor: pointer;
+}
+#testimonials #i_1:checked ~ .wrapper .content1,
+#testimonials #i_2:checked ~ .wrapper .content2,
+#testimonials #i_3:checked ~ .wrapper .content3,
+#testimonials #i_4:checked ~ .wrapper .content4,
+#testimonials #i_5:checked ~ .wrapper .content5,
+#testimonials #i_6:checked ~ .wrapper .content6 {
+  opacity: 1;
+  pointer-events: auto;
+}
+#testimonials #i_1:checked ~ .controls label[for=i_1],
+#testimonials #i_2:checked ~ .controls label[for=i_2],
+#testimonials #i_3:checked ~ .controls label[for=i_3],
+#testimonials #i_4:checked ~ .controls label[for=i_4],
+#testimonials #i_5:checked ~ .controls label[for=i_5],
+#testimonials #i_6:checked ~ .controls label[for=i_6] {
+  color: #424242;
 }
 
 /*# sourceMappingURL=style.css.map */
