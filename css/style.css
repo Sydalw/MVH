@@ -471,12 +471,12 @@ nav .menu-container .list-nav ul.sous-menu {
     width: calc(100% + 4rem);
   }
 }
-nav .menu-container .list-nav ul.sous-menu:active {
+nav .menu-container .list-nav ul.sous-menu:hover {
   display: flex;
   flex-direction: column;
 }
 @media screen and (max-width: 65rem) {
-  nav .menu-container .list-nav ul.sous-menu:active {
+  nav .menu-container .list-nav ul.sous-menu:hover {
     width: 100%;
     background-color: var(--p-spanned-color);
   }
@@ -1478,7 +1478,9 @@ button:hover, .btn:hover {
 #testimonials #i_3:checked ~ .wrapper .content3,
 #testimonials #i_4:checked ~ .wrapper .content4,
 #testimonials #i_5:checked ~ .wrapper .content5,
-#testimonials #i_6:checked ~ .wrapper .content6 {
+#testimonials #i_6:checked ~ .wrapper .content6,
+#testimonials #i_7:checked ~ .wrapper .content7,
+#testimonials #i_8:checked ~ .wrapper .content8 {
   opacity: 1;
   pointer-events: auto;
 }
@@ -1487,7 +1489,9 @@ button:hover, .btn:hover {
 #testimonials #i_3:checked ~ .controls label[for=i_3],
 #testimonials #i_4:checked ~ .controls label[for=i_4],
 #testimonials #i_5:checked ~ .controls label[for=i_5],
-#testimonials #i_6:checked ~ .controls label[for=i_6] {
+#testimonials #i_6:checked ~ .controls label[for=i_6],
+#testimonials #i_7:checked ~ .controls label[for=i_7],
+#testimonials #i_8:checked ~ .controls label[for=i_8] {
   color: #424242;
 }
 

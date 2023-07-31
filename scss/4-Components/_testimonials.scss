@@ -88,7 +88,9 @@
     #i_3:checked ~ .wrapper .content3,
     #i_4:checked ~ .wrapper .content4,
     #i_5:checked ~ .wrapper .content5,
-    #i_6:checked ~ .wrapper .content6 {
+    #i_6:checked ~ .wrapper .content6,
+    #i_7:checked ~ .wrapper .content7,
+    #i_8:checked ~ .wrapper .content8 {
         opacity: 1;
         pointer-events: auto;
     }
@@ -98,7 +100,9 @@
     #i_3:checked ~ .controls label[for="i_3"],
     #i_4:checked ~ .controls label[for="i_4"],
     #i_5:checked ~ .controls label[for="i_5"],
-    #i_6:checked ~ .controls label[for="i_6"] {
+    #i_6:checked ~ .controls label[for="i_6"],
+    #i_7:checked ~ .controls label[for="i_7"],
+    #i_8:checked ~ .controls label[for="i_8"] {
         color: #424242;
     }
     
