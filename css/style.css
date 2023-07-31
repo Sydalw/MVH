@@ -369,7 +369,7 @@ nav {
   font-weight: 700;
   position: sticky;
   position: -webkit-sticky;
-  top: 0px;
+  top: 0;
   z-index: 1000;
   border-bottom: 1px solid var(--border-color);
   display: flex;
@@ -404,10 +404,12 @@ nav .menu-container .list-nav {
 }
 @media screen and (max-width: 65rem) {
   nav .menu-container .list-nav {
-    display: block;
     position: relative;
-    top: -53rem;
+    display: block;
+    top: -53.3rem;
+    left: 0;
     transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+    height: 0;
   }
 }
 nav .menu-container .list-nav li {
@@ -438,8 +440,10 @@ nav .menu-container .list-nav li:hover {
 nav .menu-container .list-nav li a {
   padding: 2rem;
 }
-nav .menu-container .list-nav .deroulant:hover {
-  background-color: aqua;
+@media screen and (max-width: 65rem) {
+  nav .menu-container .list-nav .deroulant:hover {
+    background-color: var(--p-spanned-color);
+  }
 }
 nav .menu-container .list-nav .deroulant:hover ~ .sous-menu {
   display: flex;
@@ -452,41 +456,46 @@ nav .menu-container .list-nav .deroulant:hover ~ .sous-menu {
     width: 100%;
   }
 }
-nav .menu-container .list-nav .sous-menu {
+nav .menu-container .list-nav ul.sous-menu {
   display: none;
   position: absolute;
   z-index: 1000;
+  background-color: var(--nav-bg);
+  margin-left: 14rem;
 }
 @media screen and (max-width: 65rem) {
-  nav .menu-container .list-nav .sous-menu {
+  nav .menu-container .list-nav ul.sous-menu {
     position: static;
+    background-color: var(--nav-bg);
+    margin-left: -4rem;
+    width: calc(100% + 4rem);
   }
 }
-nav .menu-container .list-nav .sous-menu:hover {
-  background-color: aqua;
+nav .menu-container .list-nav ul.sous-menu:active {
   display: flex;
   flex-direction: column;
 }
 @media screen and (max-width: 65rem) {
-  nav .menu-container .list-nav .sous-menu:hover {
-    position: static;
-    display: block;
+  nav .menu-container .list-nav ul.sous-menu:active {
     width: 100%;
-    background-color: #fff;
+    background-color: var(--p-spanned-color);
   }
 }
-nav .menu-container .list-nav .sous-menu li {
-  position: relative;
-  background-color: white;
+nav .menu-container .list-nav ul.sous-menu li {
   width: 100%;
   text-align: left;
-  margin-left: 10rem;
+  position: relative;
+}
+nav .menu-container .list-nav ul.sous-menu li a {
+  padding: -2rem;
 }
 @media screen and (max-width: 65rem) {
-  nav .menu-container .list-nav .sous-menu li {
+  nav .menu-container .list-nav ul.sous-menu li {
     margin-left: 0;
+    width: 100%;
+    margin-right: 10rem;
   }
-  nav .menu-container .list-nav .sous-menu li:hover {
+  nav .menu-container .list-nav ul.sous-menu li:hover {
     background-color: var(--p-spanned-color);
     color: #fff;
   }
@@ -539,7 +548,7 @@ nav .menu-container .list-nav .sous-menu li {
   content: "";
   position: absolute;
   left: 0;
-  transition: all 0.2s;
+  transition: all 0.4s;
   display: none;
 }
 @media (max-width: 65rem) {
@@ -571,7 +580,7 @@ nav .menu-container .list-nav .sous-menu li {
 
 .navigationCheckbox:checked ~ .list-nav {
   display: block;
-  transform: translateY(52.7rem);
+  transform: translateY(53rem);
 }
 @media screen and (min-width: 65rem) {
   .navigationCheckbox:checked ~ .list-nav {
@@ -1017,7 +1026,7 @@ nav .menu-container .list-nav .sous-menu li {
 }
 @media (max-width: 45rem) {
   .quote .section-container .carte-temoignage {
-    margin: 0 5rem;
+    margin: 0 5rem 5rem;
   }
 }
 .quote .section-container .guillemet-fermant {
@@ -1170,6 +1179,11 @@ nav .menu-container .list-nav .sous-menu li {
 #FAQ .questions-container .question-container details summary:after {
   content: "+";
 }
+@media (max-width: 65rem) {
+  #FAQ .questions-container .question-container details summary {
+    font-size: 2rem;
+  }
+}
 #FAQ details[open] summary {
   border-bottom: 1px solid #aaa;
   margin-bottom: 0.5em;
@@ -1299,6 +1313,12 @@ button:hover, .btn:hover {
 @media (max-width: 108rem) {
   #contact .contact-container .formulaire_formContainer {
     margin: 5rem;
+  }
+}
+@media (max-width: 65rem) {
+  #contact .contact-container .formulaire_formContainer {
+    width: 85%;
+    padding: 3rem;
   }
 }
 #contact .contact-container .formulaire_formContainer .formulaire {

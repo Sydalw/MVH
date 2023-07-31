@@ -36,6 +36,11 @@
             @media (max-width: 108rem) {
                 margin: 5rem;
             }
+
+            @media (max-width: 65rem) {
+                width: 85%;
+                padding: 3rem;
+            }
             .formulaire {
                 display: flex;
                 flex-direction: column;

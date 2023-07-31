@@ -13,7 +13,7 @@ nav {
     font-weight: 700;
     position: sticky;
     position: -webkit-sticky;
-    top: 0px;
+    top: 0;
     z-index: 1000;
     border-bottom: 1px solid var(--border-color);
     display:flex;
@@ -35,7 +35,7 @@ nav {
 
     .menu-container {
 
-    //     width:100%;
+         //width:100%;
 
         .list-nav {
             width: 100%;
@@ -46,11 +46,12 @@ nav {
             color: var(--nav-font-color);
             
             @media screen and (max-width: 65rem) {
-                display: block;
                 position: relative;
-                top: -53rem;
+                display: block;
+                top: -53.3rem;
+                left: 0;
                 transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
-                //z-index: -10;
+                height: 0;
             }
 
             li {
@@ -58,7 +59,7 @@ nav {
                 list-style-type: none;
                 transition: all 0.2s ease-in-out;
                 position: relative;
-                width:auto;
+                width: auto;
                 
                 &:hover {
                     cursor: pointer;
@@ -69,6 +70,7 @@ nav {
                     line-height: 10rem;
                     display: block;
                     margin-left: -4rem;
+                    //width:100%;
                     background-color: var(--nav-bg);
                     
                     &:hover {
@@ -86,55 +88,70 @@ nav {
 
             .deroulant {
                 &:hover {
-                    background-color: aqua;
+                    @media screen and (max-width: 65rem) {
+                        background-color: var(--p-spanned-color);
+                    }
 
                     &~.sous-menu{
                         display: flex;
                         flex-direction: column;
 
                         @media screen and (max-width: 65rem) {
-                            //display:none;
                             position: static;
                             display: block;
-                            width: 100%;;
+                            width: 100%;
+                            //margin-left: -8rem;
+
+
                         }
                     }
                 }
             }
 
-            .sous-menu {
+            ul.sous-menu {
                 display: none;
                 position: absolute;
                 z-index: 1000;
+                background-color: var(--nav-bg);
+                //background-color: var(--p-spanned-color);
+                margin-left: 14rem;
+
                 @media screen and (max-width: 65rem) {
                     position: static;
+                    background-color: var(--nav-bg);
+                    margin-left:-4rem;
+                    width:calc(100% + 4rem);
                 }
 
-                &:hover {
-                        background-color: aqua;
-                        display: flex;
-                        flex-direction: column;
-                        @media screen and (max-width: 65rem) {
-                            position: static;
-                            display: block;
-                            width: 100%;
-                            background-color: #fff;
-                        }
-                    }
-        
-                li{
-                    position: relative;
-                    background-color: white;
-                    width: 100%;
-                    text-align: left;
-                    margin-left:10rem;
+                &:active {
+                    display: flex;
+                    flex-direction: column;
 
                     @media screen and (max-width: 65rem) {
+                        width: 100%;
+                        background-color: var(--p-spanned-color);
+                    }
+                }
+        
+                li{
+                    width: 100%;
+                    text-align: left;
+                    //margin-left: 10rem;
+                    position: relative;
+                    //background-color: red;
+                    a {
+                        padding: -2rem;
+                    }
+
+                    @media screen and (max-width: 65rem) {
+                        margin-left: 0;
+                        width: 100%;
+                        margin-right: 10rem;;
+
                         &:hover {
                             background-color: var(--p-spanned-color);
                             color:#fff;
                         }
-                        margin-left:0;
                     }
                 }
             }
