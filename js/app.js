@@ -23,3 +23,34 @@ deroulant.addEventListener("click", function () {
     sousmenu.classList.toggle("visible");
     console.log("clic reussi");
 });
+
+
+const appear = document.querySelector('#animated1'); 
+const appear2 = document.querySelector('#animated2'); 
+const appearForm = document.querySelector('#animatedForm'); 
+
+const cb = function(entries){
+    entries.forEach(entry => {
+        if(entry.isIntersecting){
+        entry.target.classList.add('fadeinleft');
+        }else{
+        entry.target.classList.remove('fadeinleft');
+        }
+    });
+}
+
+const cb2 = function(entries){
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.classList.add('fadeinform');
+      }else{
+        entry.target.classList.remove('fadeinform');
+      }
+    });
+}
+
+const io = new IntersectionObserver(cb);
+const io2 = new IntersectionObserver(cb2);
+io.observe(appear);
+io.observe(appear2);
+io2.observe(appearForm);

@@ -1355,8 +1355,47 @@ button:hover, .btn:hover {
 
 .fadeintop {
   animation: fadeintop 2s ease;
+  -moz-animation: fadeintop 2s;
+  /* Firefox */
+  -webkit-animation: fadeintop 2s;
+  /* Safari et Chrome */
+  -o-animation: fadeintop 2s;
+  /* Opera */
 }
 @keyframes fadeintop {
+  from {
+    top: -50rem;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+@-moz-keyframes fadeintop {
+  /* sur Firefox */
+  from {
+    top: -50rem;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadeintop {
+  /* sur Safari et Chrome */
+  from {
+    top: -50rem;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+@-o-keyframes fadeintop {
+  /* sur Opera */
   from {
     top: -50rem;
     opacity: 0;
@@ -1369,8 +1408,47 @@ button:hover, .btn:hover {
 
 .fadeinleft {
   animation: fadeinleft 2s ease;
+  -moz-animation: fadeinleft 2s;
+  /* Firefox */
+  -webkit-animation: fadeinleft 2s;
+  /* Safari et Chrome */
+  -o-animation: fadeinleft 2s;
+  /* Opera */
 }
 @keyframes fadeinleft {
+  from {
+    left: -25rem;
+    opacity: 0;
+  }
+  to {
+    left: -3rem;
+    opacity: 1;
+  }
+}
+@-moz-keyframes fadeinleft {
+  /* sur Firefox */
+  from {
+    left: -25rem;
+    opacity: 0;
+  }
+  to {
+    left: -3rem;
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadeinleft {
+  /* sur Safari et Chrome */
+  from {
+    left: -25rem;
+    opacity: 0;
+  }
+  to {
+    left: -3rem;
+    opacity: 1;
+  }
+}
+@-o-keyframes fadeinleft {
+  /* sur Opera */
   from {
     left: -25rem;
     opacity: 0;
@@ -1383,8 +1461,47 @@ button:hover, .btn:hover {
 
 .fadeinform {
   animation: fadeinform 2s ease;
+  -moz-animation: fadeinform 2s;
+  /* Firefox */
+  -webkit-animation: fadeinform 2s;
+  /* Safari et Chrome */
+  -o-animation: fadeinform 2s;
+  /* Opera */
 }
 @keyframes fadeinform {
+  from {
+    left: -25rem;
+    opacity: 0;
+  }
+  to {
+    left: 0rem;
+    opacity: 1;
+  }
+}
+@-moz-keyframes fadeinform {
+  /* sur Firefox */
+  from {
+    left: -25rem;
+    opacity: 0;
+  }
+  to {
+    left: 0rem;
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fadeinform {
+  /* sur Safari et Chrome */
+  from {
+    left: -25rem;
+    opacity: 0;
+  }
+  to {
+    left: 0rem;
+    opacity: 1;
+  }
+}
+@-o-keyframes fadeinform {
+  /* sur Opera */
   from {
     left: -25rem;
     opacity: 0;
