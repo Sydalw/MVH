@@ -65,6 +65,11 @@ section.contenu-redactionnel > div {
             margin:2rem 0;
             width: 100%;
         }
+        li {
+            font-family: 'Open sans', 'Josefin sans', 'Roboto', 'Helvetica Neue', 'Comfortaa';
+            font-size: clamp(1.6rem, 1.6vw, 2rem);
+            color: var(--p-color);
+        }
     }
 
 }

@@ -15,19 +15,15 @@
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.12.0/dist/cdn.min.js"></script>
 </head>
 <body>
-    <button class="btn" id="btn-fixed">
-        <a href="./index.html#contact">Me contacter</a>
-    </button>
     <div class="top-bar">
         <div class="box-sizer">
             <div>
-                <a href=""><i class="fa-brands fa-skype"></i></a>
-                <a href=""><i class="fa-brands fa-instagram"></i></a>
-                <a href=""><i class="fa-brands fa-facebook-f"></i></a>
-                <a href=""><i class="fa-brands fa-github"></i></a>
+                <!-- <a href=""><i class="fa-brands fa-skype"></i></a> -->
+                <a href="https://www.instagram.com/magalypnose40/"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://www.facebook.com/profile.php?id=100079241703316"><i class="fa-brands fa-facebook-f"></i></a>
             </div>
             <div>
-                <a href="mailto=magalie.villora@wanadoo.fr"><i class="fa-sharp fa-solid fa-envelope"></i> magalie.villora@wanadoo.fr</a>
+                <a href="mailto=magaly.pnose@gmail.com"><i class="fa-sharp fa-solid fa-envelope"></i> magaly.pnose@gmail.com</a>
                 <a href="tel=0782905486"><i class="fa-solid fa-phone"></i> 07.82.90.54.86</a>
             </div>
         </div>
@@ -46,26 +42,46 @@
                     <span class="navigationIcon">&nbsp;</span>
                 </label>
                 <ul class="list-nav">
-                    <li><a href="./qui-suis-je.html">Qui suis-je</a></li>
-                    <li><a href="./mes-outils.html">Mon outil</a></li>
-                    <li><a href="./index.html#pricing">Tarifs & Contact</a></li>
-                    <!-- <li><a href="#contact">Contact</a></li> -->
+                    <li class="non-deroulant"><a href="./qui-suis-je.html">Qui suis-je</a></li>
+                    <li class="" id="deroulant">Thématiques</li>
+                        <ul class="sous-menu" id="sous-menu">
+                            <li><a href="./ados-enfants.html">Enfants & ados</a></li>
+                            <li><a href="./alim.html">Alimentation et poids</a></li>
+                            <li><a href="./emotions.html">Face à vos émotions</a></li>
+                            <li><a href="./situations-douloureuses.html">Situations douloureuses</a></li>
+                            <li><a href="./phobies.html">Phobies</a></li>
+                        </ul>
+                    <li class="non-deroulant"><a href="./mes-outils.html">Déroulement d'une séance</a></li>
+                    <li class="non-deroulant"><a href="#pricing">Tarifs & Contact</a></li>
                 </ul>
             </div>
         </div>
     </nav>
     <main>
        <section class="contenu-redactionnel section-container">
-            <h2>Qui suis-je ?</h2>
+            <div>
+                <div class="image" id="emotions"></div>
+                <h2>Qui suis-je ?</h2>
+            </div>
             <article>
-                <p>Je m’appelle Magalie, j’ai 41 ans, je vis en couple et je suis mère de deux enfants.</p>
-                <p>Le contexte dans lequel je suis née m’a amené à développer des qualités qui sont à mon sens essentielles au métier de thérapeute, comme par exemple, l’altruisme, l’empathie et une écoute bienveillante.</p>
-                <p>Très sensible à la souffrance d’autrui, c’est naturellement, que je me suis orientée vers des études de psychologie puis vers la profession d’assistante sociale.</p>
-                <p>Toujours dans un souci d’accompagner le mieux possible, j’ai continué à me former. J’ai obtenu en 2018 un Diplôme Universitaire de médiation et gestion des conflits, à cette occasion, j’ai découvert entre autres la communication non violente et ses effets sur la qualité des relations intra et interpersonnelles. Curieuse et intéressée, je me suis formée à ce processus. </p>
-                <p>A travers mon expérience, mes diverses formations et mon analyse sur les choses, je mesure  vraiment à quel point nos façons d’agir peuvent être impactées suivant l’angle de vue que nous portons sur les évènements. </p>
-                <p>Après avoir exercé pendant 16 ans le métier d’assistante sociale, j’ai eu besoin d’apporter un nouveau souffle à ma carrière en accompagnant les personnes différemment… avec une autre façon d’aider qui soit davantage centrée sur la personne, ses failles, ses forces et son histoire de vie.</p>
-                <p>J’avais besoin d’un outil concret qui redonne à la personne du pouvoir sur elle-même et lorsque cette dernière est prête et désireuse, l’aider à évoluer vers quelque chose de plus satisfaisant.</p>
-                <p> Je me suis formée en hypnose Ericksonienne et j’ai obtenu une certification de Praticienne en hypnose. </p>
+                <p>Je m’appelle <strong>Magalie</strong>, j’ai 41 ans, je vis en couple et je suis mère de deux enfants.</p>
+                <p>Le contexte dans lequel je suis née m’a amené à développer des qualités qui sont à mon sens essentielles au métier de thérapeute, comme par exemple, l’<strong>altruisme</strong>, l’<strong>empathie</strong> et une <strong>écoute bienveillante</strong>.</p>
+                <p>Très sensible à la souffrance d’autrui, c’est naturellement, que je me suis orientée vers des <strong>études de psychologie</strong> puis vers la profession d’<strong>assistante sociale</strong>.</p>
+                <p>Toujours dans un souci d’accompagner le mieux possible, j’ai continué à me former. J’ai obtenu en 2018 un <strong>Diplôme Universitaire de médiation et gestion des conflits</strong>, à cette occasion, j’ai découvert entre autres la <strong>communication non violente</strong> et ses effets sur la qualité des relations intra et interpersonnelles. Curieuse et intéressée, je me suis formée à ce processus. </p>
+                <p>A travers mon expérience, mes diverses formations et mon analyse sur les choses, je mesure  vraiment à quel point <strong>nos façons d’agir peuvent être impactées</strong> suivant l’<strong>angle de vue</strong> que nous portons sur les évènements. </p>
+                <p>Après avoir exercé pendant 16 ans le métier d’assistante sociale, j’ai eu besoin d’apporter un <strong>nouveau souffle</strong> à ma carrière en accompagnant les personnes différemment… avec une <strong>autre façon d’aider</strong> qui soit <strong>davantage centrée sur la personne</strong>, ses failles, ses forces et son histoire de vie.</p>
+                <p>J’avais besoin d’un <strong>outil concret</strong> qui redonne à la personne du pouvoir sur elle-même et lorsque cette dernière est prête et désireuse, l’aider à évoluer vers quelque chose de plus <strong>satisfaisant</strong>.</p>
+                <p>Je me suis formée en <strong>hypnose Ericksonienne</strong> et j’ai obtenu une certification de Praticienne en hypnose. </p>
+                <p><u>Mes formations</u> : 
+                    <ul>
+                        <li>Certification en hypnose Ericksonienne-Bordeaux (formation complémentaire dans l’accompagnement des enfants et des adolescents)</li>
+                        <li>Formation en hypnose transgénérationnelle et régressive </li>
+                        <li>Licence de psychologie-Toulouse</li>
+                        <li>Diplôme d'Etat d’Assistant de Service Social-Toulouse</li>
+                        <li>Diplôme Universitaire de médiation et gestion des conflits-Tours</li>
+                        <li>Formation en Communication Non-Violente Cycle 1,2 et 3-Landes</li>
+                    </ul>
+                </p>
             </article>
        </section>
     </main>
@@ -85,11 +101,14 @@
                 </div>
                 <div>
                     <a href="mailto=wladys.lelong@devlopetvous.fr"><i class="fa-sharp fa-solid fa-envelope"></i> wladys.lelong@devlopetvous.fr</a>
-                    <a href="https://devlopetvous.fr"><i class="fa-solid fa-phone"></i> devlopetvous.fr</a>
+                    <a href="https://devlopetvous.fr"><i class="fa-solid fa-globe"></i> devlopetvous.fr</a>
                 </div>
             </div>
         </div>
     </footer>
+    <button class="btn" id="btn-fixed">
+        <a href="./index.html#contact">Me contacter</a>
+    </button>
     <script src="./js/app.js"></script>
 </body>
 </html>

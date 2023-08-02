@@ -11,6 +11,14 @@
     <link href="./css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
+    <meta name="msapplication-TileColor" content="#00aba9">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta property="og:title" content="Magalie Villora Hypnose">
+    <meta property="og:type" content="website">
+
     <script defer src="https://cdn.jsdelivr.net/npm/@alpinejs/intersect@3.12.0/dist/cdn.min.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.12.0/dist/cdn.min.js"></script>
 </head>
@@ -43,8 +51,8 @@
                 </label>
                 <ul class="list-nav">
                     <li class="non-deroulant"><a href="./qui-suis-je.html">Qui suis-je</a></li>
-                    <li class="deroulant">Thématiques</li>
-                        <ul class="sous-menu">
+                    <li class=""id="deroulant">Thématiques</li>
+                        <ul class="sous-menu" id="sous-menu">
                             <li><a href="./ados-enfants.html">Enfants & ados</a></li>
                             <li><a href="./alim.html">Alimentation et poids</a></li>
                             <li><a href="./emotions.html">Face à vos émotions</a></li>
@@ -462,7 +470,35 @@
                 <label for="i_8">⬤</label>
             </div>
         </section>
-        
+        <section class="grosse-carte" id="pitch">
+            <div class="section-container">
+                <div x-data="{ shown: false }" x-intersect:enter="shown = true" x-intersect:leave="shown = false" class="svg-container">
+                    <svg x-show="shown" x-transition class="fadeinleft" viewBox="0 0 160 160" x="0px" y="0px" id="svg-1670" style="enable-background:new 0 0 160 160;">
+                        <path d="M10.3,39.9c-18.2,24.9-9.2,62.5,4,87.4c8.2,15.4,23,36.1,48.6,32.2c5.8-0.9,11.1-3.2,16.9-4.3c17.8-3.4,37.9,4.7,54.5-1.5
+                    c6.6-2.5,11.6-6.9,15.5-11.8c12.2-15.3,13.7-35.6,3.8-51.9c-6.9-11.5-19-20.9-23.6-33.1c-4.5-11.9-1.4-24.9-4.7-37.1
+                    C121.1,5,103.7-5.6,85.7,3.1c-6.8,3.3-12.6,7.7-20,10.2C58,15.9,49.5,16.6,41.6,19C26.8,23.6,16.7,31,10.3,39.9z"></path>
+                    </svg>
+                </div>
+                <div class="section-content">
+                    <div class="photo-container">
+                        <!-- <img class="" src="./ressources/images/20230429_184104.jpg" alt=""> -->
+                    </div>
+                    <div class="text-container">
+                        <h2 class="">Bonjour et bienvenue !</h2>
+                        <h3>Je m’appelle Magalie et je suis praticienne en Hypnose certifiée.</h3>
+                        <p>Assistante sociale de formation, cela fait 17 ans que j’accompagne des adultes, des familles et des enfants en difficulté.  </p>
+                        <p>Parce que pour moi, il est important de s’épanouir  au travail,  j’ai choisi de continuer à exercer dans l’accompagnement  mais avec une approche différente, davantage centrée sur vous.  </p>
+                        <p>J’ai à cœur de vous aider par l’hypnose à reprendre le contrôle sur tout ce qui peut vous empêcher de vivre sereinement votre vie.</p>
+                        <a href="./qui-suis-je.html">
+                            <button class="btn">
+                                Mieux me connaitre
+                            </button>
+                        </a>
+                        <!-- <img class="shape" src="./ressources/images/Untitled-1.png" alt=""> -->
+                    </div>
+                </div>
+            </div>
+        </section>
         <!-- <section id="fading-img">
             <div x-data="{ shown: false }" x-intersect:enter="shown = true" x-intersect:leave="shown = false" class="section-container ">
               <img x-show="shown" x-transition class="fadeintop" src="./ressources/images/istockphoto-875331434-1024x1024.jpg" alt="" >

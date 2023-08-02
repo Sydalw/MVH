@@ -70,7 +70,6 @@ nav {
                     line-height: 10rem;
                     display: block;
                     margin-left: -4rem;
-                    //width:100%;
                     background-color: var(--nav-bg);
                     
                     &:hover {
@@ -86,51 +85,35 @@ nav {
                 }
             }
 
-            .deroulant {
-                &:hover {
-                    @media screen and (max-width: 65rem) {
-                        background-color: var(--p-spanned-color);
+            #deroulant {
+                @media screen and (max-width: 65rem) {
+                    &:after {
+                        content:"+";
+                        position: absolute;
+                        right:2rem;
                     }
+                }
 
-                    &~.sous-menu{
-                        display: flex;
-                        flex-direction: column;
-
-                        @media screen and (max-width: 65rem) {
-                            position: static;
-                            display: block;
-                            width: 100%;
-                            //margin-left: -8rem;
-
-
+                @media screen and (min-width: 65rem ){
+                    &:hover {
+                        &~.sous-menu{
+                                display: flex;
+                                flex-direction: column;
+                            }
                         }
-                    }
                 }
             }
 
-            ul.sous-menu {
+            .sous-menu {
                 display: none;
                 position: absolute;
                 z-index: 1000;
                 background-color: var(--nav-bg);
-                //background-color: var(--p-spanned-color);
                 margin-left: 14rem;
-
-                @media screen and (max-width: 65rem) {
-                    position: static;
-                    background-color: var(--nav-bg);
-                    margin-left:-4rem;
-                    width:calc(100% + 4rem);
-                }
 
                 &:hover {
                     display: flex;
                     flex-direction: column;
-
-                    @media screen and (max-width: 65rem) {
-                        width: 100%;
-                        background-color: var(--p-spanned-color);
-                    }
                 }
         
                 li{
@@ -138,23 +121,28 @@ nav {
                     text-align: left;
                     //margin-left: 10rem;
                     position: relative;
-                    //background-color: red;
+
+                    line-height: 7rem;
+                    height: 7rem;
+
                     a {
                         padding: -2rem;
-                    }
-
-                    @media screen and (max-width: 65rem) {
-                        margin-left: 0;
-                        width: 100%;
-                        margin-right: 10rem;;
-
-                        &:hover {
-                            background-color: var(--p-spanned-color);
-                            color:#fff;
-                        }
                     }
                 }
             }
         }
+    }
+}
+
+#sous-menu.visible {
+    @media screen and (max-width: 65rem) {
+        display:block;
+        position: static;
+        background-color: var(--nav-bg);
+        margin-left:-4rem;
+        width:calc(100% + 4rem);
+        margin-left: 0;
+        width: 100%;
+        margin-right: 10rem;
     }
 }
