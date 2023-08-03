@@ -1,0 +1,88 @@
+#pricing {
+
+    margin: 3rem 0;
+
+    .section-container{
+
+        h2, h6 {
+            text-align: center;
+        }
+
+        h2 {
+            font-size: clamp(2.5rem, 3.5vw, 4rem);
+            margin: 3rem 20rem 0;
+            @media (max-width: 45rem) {
+                margin: 0 5rem;
+            }
+        }
+        h6 {
+            text-transform: uppercase;
+            font-size: 2.5rem;
+        }
+
+        .photo-deco {
+            fill:var(--cambridge-blue);
+            position: relative;
+            margin-bottom: -10%;
+            height: 20rem;
+            @media (max-width: 45rem) {
+                //margin-top: -5rem;
+                height: 10rem;
+            }
+        }
+        .cartes-tarif-container {
+            display:flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+
+            .carte-tarifs {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                .svg-prix-container{
+                    height: 13rem;
+                    margin: 3rem 0 0;
+
+                    svg {
+                        height: 100%;
+                        fill:var(--cambridge-blue);
+                    }
+                }
+                
+                h4 {
+                    margin: 3rem 0 0;
+                    color:var(--cambridge-blue);
+                    font-weight: 700;
+                    font-size: 5rem;
+                }
+
+                .trait {
+                    margin: 3rem 0 0;
+                    border: solid 1px var(--indian-red);
+                    height: 2px;
+                    width: 100%;
+                }
+                
+                p {
+                    margin: 3rem 0;
+                    font-size: 2rem;
+                    padding: 0 3rem;
+                    text-align: justify;
+                    @media (max-width: 45rem) {
+                        margin:3rem;
+                        text-align: center;
+                        
+                    }
+                }
+
+                h6 {
+                    margin: 3rem 0 0;
+                    font-size: 2rem;
+                    text-transform: uppercase;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+}

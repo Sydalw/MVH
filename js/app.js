@@ -12,16 +12,11 @@ for (let i=0; i< cartes.length; i++) {
 
 
 const deroulant = document.getElementById("deroulant");
-console.log(deroulant);
 const sousmenu = document.getElementById("sous-menu");
-console.log(sousmenu);
-
 let classes = sousmenu.classList;
-console.log(classes);
 
 deroulant.addEventListener("click", function () {
     sousmenu.classList.toggle("visible");
-    console.log("clic reussi");
 });
 
 
@@ -29,7 +24,7 @@ const appear = document.querySelector('#animated1');
 const appear2 = document.querySelector('#animated2'); 
 const appearForm = document.querySelector('#animatedForm'); 
 
-const cb = function(entries){
+const fadeinleft = function(entries){
     entries.forEach(entry => {
         if(entry.isIntersecting){
         entry.target.classList.add('fadeinleft');
@@ -39,7 +34,7 @@ const cb = function(entries){
     });
 }
 
-const cb2 = function(entries){
+const fadeinform = function(entries){
     entries.forEach(entry => {
       if(entry.isIntersecting){
         entry.target.classList.add('fadeinform');
@@ -49,8 +44,8 @@ const cb2 = function(entries){
     });
 }
 
-const io = new IntersectionObserver(cb);
-const io2 = new IntersectionObserver(cb2);
+const io = new IntersectionObserver(fadeinleft);
+const io2 = new IntersectionObserver(fadeinform);
 io.observe(appear);
 io.observe(appear2);
 io2.observe(appearForm);
