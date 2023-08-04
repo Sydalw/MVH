@@ -24,6 +24,14 @@ section.contenu-redactionnel > div {
         border-radius: 50%;
         background-repeat: no-repeat;
 
+        &#quisuisje {
+            background-image: url("../ressources/images/CA9A9810.webp");
+            background-position: 50% 50%;
+            width:13.5rem;
+            height:13.5rem;
+            background-size: cover;
+        }
+
         &#alim {
             background-image: url("../ressources/images/alim.jpg");
             background-position: 60% 50%;

@@ -313,7 +313,7 @@ p {
   }
 }
 .banner .photo-vignette {
-  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05)), url("../ressources/images/CA9A9674 - Magalie Villora - 6.jpeg");
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05)), url("../ressources/images/CA9A9674.webp");
   height: 86rem;
   background-repeat: no-repeat;
   background-size: cover;
@@ -444,6 +444,11 @@ nav .menu-container .list-nav li:hover {
 }
 nav .menu-container .list-nav li a {
   padding: 2rem;
+}
+@media screen and (min-width: 65rem) {
+  nav .menu-container .list-nav li:last-of-type.non-deroulant > a {
+    padding-left: 0;
+  }
 }
 @media screen and (max-width: 65rem) {
   nav .menu-container .list-nav #deroulant:after {
@@ -707,7 +712,7 @@ nav .menu-container .list-nav .sous-menu li a {
   }
 }
 .grosse-carte#pitch .photo-container {
-  background-image: url("../ressources/images/CA9A9730 - Magalie Villora - 12.jpeg");
+  background-image: url("../ressources/images/CA9A9730.webp");
   width: 45rem;
   height: 55rem;
   background-repeat: no-repeat;
@@ -1206,7 +1211,7 @@ button:hover, .btn:hover {
 }
 
 #contact {
-  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), url("../ressources/images/bureau.jpg");
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)), url("../ressources/images/bureau.webp");
   height: 86rem;
   width: 100%;
   background-repeat: no-repeat;
@@ -1474,6 +1479,13 @@ section.contenu-redactionnel > div:first-child {
   content: "";
   border-radius: 50%;
   background-repeat: no-repeat;
+}
+.contenu-redactionnel .image#quisuisje {
+  background-image: url("../ressources/images/CA9A9810.webp");
+  background-position: 50% 50%;
+  width: 13.5rem;
+  height: 13.5rem;
+  background-size: cover;
 }
 .contenu-redactionnel .image#alim {
   background-image: url("../ressources/images/alim.jpg");
