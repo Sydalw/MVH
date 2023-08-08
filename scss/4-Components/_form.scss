@@ -33,11 +33,11 @@
             width: 50%;
             justify-content: center;
 
-            @media (max-width: 108rem) {
+            @media screen and (max-width: 108rem) {
                 margin: 5rem;
             }
 
-            @media (max-width: 65rem) {
+            @media screen and (max-width: 65rem) {
                 width: 85%;
                 padding: 3rem;
             }

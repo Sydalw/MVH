@@ -3,9 +3,26 @@
     src: url('../ressources/fonts/acier-text-solid.ttf');
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;700&family=Dancing+Script:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Cardo:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@font-face {
+    font-family: 'Lora';
+    src: url('../ressources/fonts/Lora/Lora-VariableFont_wght.ttf');
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Lora';
+    src: url('../ressources/fonts/Lora/Lora-Italic-VariableFont_wght.ttf');
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../ressources/fonts/Open_Sans/OpenSans-VariableFont_wdth,wght.ttf');
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../ressources/fonts/Open_Sans/OpenSans-Italic-VariableFont_wdth,wght.ttf');
+    font-style: italic;
+}
+// @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400;1,700&display=swap');

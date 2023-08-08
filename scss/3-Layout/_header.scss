@@ -33,7 +33,7 @@
     flex-direction: column;
     justify-content: flex-end;
 
-    @media (max-width: 991px) {
+    @media screen and (max-width: 991px) {
         justify-content: space-between;
         align-items: center;
         margin:0;
@@ -49,7 +49,7 @@
         text-transform: uppercase;
         //font-family: "acier", "Playfair Display", serif !important;
         margin: 0 0 0 3rem;
-        @media (max-width: 991px) {
+        @media screen and (max-width: 991px) {
             text-align: center;
             margin:0;
         }
@@ -59,7 +59,7 @@
         text-align: left;
         color: var(--nav-bg);
         margin: 1rem 0 5rem 3rem;
-        @media (max-width: 991px) {
+        @media screen and (max-width: 991px) {
             text-align: center;
             margin:0;
         }
@@ -80,12 +80,12 @@
             right:5%;
             top:20%;
 
-            @media (max-width: 1199px) {
+            @media screen and (max-width: 1199px) {
                 height: 40rem;
                 width: 40rem;
             }
           
-            @media (max-width: 991px) {
+            @media screen and (max-width: 991px) {
                 height: 35rem;
                 width: 35rem;
                 position:relative;
@@ -93,15 +93,6 @@
                 left:0;
                 margin: 1rem 0;
             }
-          
-            @media (max-width: 767px) {
-
-            }
-          
-            @media (max-width: 575px) {
-
-            }
-
         // }
     }
 }

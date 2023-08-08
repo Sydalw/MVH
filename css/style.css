@@ -2,12 +2,6 @@
 /*
   1. Use a more-intuitive box-sizing model.
 */
-@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;700&family=Dancing+Script:wght@400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Cardo:wght@400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -68,6 +62,26 @@ p, h1, h2, h3, h4, h5, h6 {
 @font-face {
   font-family: "acier";
   src: url("../ressources/fonts/acier-text-solid.ttf");
+}
+@font-face {
+  font-family: "Lora";
+  src: url("../ressources/fonts/Lora/Lora-VariableFont_wght.ttf");
+  font-style: normal;
+}
+@font-face {
+  font-family: "Lora";
+  src: url("../ressources/fonts/Lora/Lora-Italic-VariableFont_wght.ttf");
+  font-style: italic;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url("../ressources/fonts/Open_Sans/OpenSans-VariableFont_wdth,wght.ttf");
+  font-style: normal;
+}
+@font-face {
+  font-family: "Open Sans";
+  src: url("../ressources/fonts/Open_Sans/OpenSans-Italic-VariableFont_wdth,wght.ttf");
+  font-style: italic;
 }
 :root {
   --nav-bg: #fdf8f3;
@@ -197,7 +211,7 @@ a {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Lora", "Alegreya sans", "Dancing Script", "Cardo", "acier", "Playfair Display", serif !important;
+  font-family: "Lora", "acier", "Playfair Display", serif !important;
 }
 
 h1 {
@@ -233,7 +247,7 @@ h6 {
 }
 
 p {
-  font-family: "Open sans", "Josefin sans", "Roboto", "Helvetica Neue", "Comfortaa";
+  font-family: "Open sans", "Roboto", "Helvetica Neue", "Comfortaa";
   font-size: clamp(1.6rem, 1.6vw, 2rem);
   color: var(--p-color);
 }
@@ -279,7 +293,7 @@ p {
   flex-direction: column;
   justify-content: flex-end;
 }
-@media (max-width: 991px) {
+@media screen and (max-width: 991px) {
   .banner {
     justify-content: space-between;
     align-items: center;
@@ -295,7 +309,7 @@ p {
   text-transform: uppercase;
   margin: 0 0 0 3rem;
 }
-@media (max-width: 991px) {
+@media screen and (max-width: 991px) {
   .banner h5 {
     text-align: center;
     margin: 0;
@@ -306,7 +320,7 @@ p {
   color: var(--nav-bg);
   margin: 1rem 0 5rem 3rem;
 }
-@media (max-width: 991px) {
+@media screen and (max-width: 991px) {
   .banner h1 {
     text-align: center;
     margin: 0;
@@ -326,13 +340,13 @@ p {
   right: 5%;
   top: 20%;
 }
-@media (max-width: 1199px) {
+@media screen and (max-width: 1199px) {
   .banner .photo-vignette {
     height: 40rem;
     width: 40rem;
   }
 }
-@media (max-width: 991px) {
+@media screen and (max-width: 991px) {
   .banner .photo-vignette {
     height: 35rem;
     width: 35rem;
@@ -342,6 +356,7 @@ p {
     margin: 1rem 0;
   }
 }
+
 footer {
   background-color: var(--nav-bg);
 }
@@ -515,7 +530,7 @@ nav .menu-container .list-nav .sous-menu li a {
   cursor: pointer;
   display: none;
 }
-@media (max-width: 65rem) {
+@media screen and (max-width: 65rem) {
   .navigationBtn {
     display: block;
   }
@@ -530,7 +545,7 @@ nav .menu-container .list-nav .sous-menu li a {
   border-radius: 0.25rem;
   display: none;
 }
-@media (max-width: 65rem) {
+@media screen and (max-width: 65rem) {
   .navigationIcon {
     display: inline-block;
   }
@@ -549,7 +564,7 @@ nav .menu-container .list-nav .sous-menu li a {
   transition: all 0.4s;
   display: none;
 }
-@media (max-width: 65rem) {
+@media screen and (max-width: 65rem) {
   .navigationIcon::before,
 .navigationIcon::after {
     display: block;
@@ -560,7 +575,7 @@ nav .menu-container .list-nav .sous-menu li a {
   top: -1.5rem;
   display: none;
 }
-@media (max-width: 65rem) {
+@media screen and (max-width: 65rem) {
   .navigationIcon::before {
     display: block;
   }
@@ -570,7 +585,7 @@ nav .menu-container .list-nav .sous-menu li a {
   top: 1.5rem;
   display: none;
 }
-@media (max-width: 65rem) {
+@media screen and (max-width: 65rem) {
   .navigationIcon::after {
     display: block;
   }
@@ -608,7 +623,7 @@ nav .menu-container .list-nav .sous-menu li a {
 .grosse-carte {
   margin: 0;
 }
-@media (max-width: 45rem) {
+@media screen and (max-width: 45rem) {
   .grosse-carte {
     margin: 25rem 5rem 0;
   }
@@ -621,7 +636,7 @@ nav .menu-container .list-nav .sous-menu li a {
   left: -3rem;
   z-index: -50;
 }
-@media (max-width: 45rem) {
+@media screen and (max-width: 45rem) {
   .grosse-carte svg {
     left: -3rem;
     bottom: -30rem;
@@ -633,9 +648,10 @@ nav .menu-container .list-nav .sous-menu li a {
   flex-direction: row;
   margin: 0 3rem;
 }
-@media (max-width: 55rem) {
+@media screen and (max-width: 55rem) {
   .grosse-carte .section-content {
     flex-direction: column;
+    margin: 0;
   }
 }
 .grosse-carte .section-content .text-container {
@@ -647,10 +663,11 @@ nav .menu-container .list-nav .sous-menu li a {
   text-align: justify;
   padding: 0 3rem;
 }
-@media (max-width: 76.8rem) {
+@media screen and (max-width: 76.8rem) {
   .grosse-carte .section-content .text-container {
     width: 90%;
     margin: 5rem auto;
+    padding: 0;
   }
 }
 @media screen and (max-width: 55rem) {
@@ -696,7 +713,7 @@ nav .menu-container .list-nav .sous-menu li a {
   background-position: 50% 50%;
   border-radius: 50%;
 }
-@media (max-width: 76.8rem) {
+@media screen and (max-width: 76.8rem) {
   .grosse-carte#vers-outil .photo-container {
     border-radius: 999rem;
     width: 90%;
@@ -706,7 +723,7 @@ nav .menu-container .list-nav .sous-menu li a {
 .grosse-carte#vers-outil svg {
   fill: var(--indian-red);
 }
-@media (max-width: 76.8rem) {
+@media screen and (max-width: 76.8rem) {
   .grosse-carte#vers-outil img {
     display: none;
   }
@@ -720,13 +737,13 @@ nav .menu-container .list-nav .sous-menu li a {
   background-position: 50% 100%;
   border-radius: 50%;
 }
-@media (max-width: 76.8rem) {
+@media screen and (max-width: 76.8rem) {
   .grosse-carte#pitch .photo-container {
     width: 55rem;
     margin: 0 auto;
   }
 }
-@media (max-width: 45rem) {
+@media screen and (max-width: 45rem) {
   .grosse-carte#pitch .photo-container {
     width: 70vw;
     height: 70vw;
@@ -752,7 +769,7 @@ nav .menu-container .list-nav .sous-menu li a {
 #FAQ h2 {
   margin: 3rem 20rem 5rem;
 }
-@media (max-width: 45rem) {
+@media screen and (max-width: 45rem) {
   #FAQ h2 {
     margin: 0 5rem;
   }
@@ -800,7 +817,7 @@ nav .menu-container .list-nav .sous-menu li a {
 #FAQ .questions-container .question-container details summary:after {
   content: "+";
 }
-@media (max-width: 65rem) {
+@media screen and (max-width: 65rem) {
   #FAQ .questions-container .question-container details summary {
     font-size: 2rem;
   }
@@ -827,7 +844,7 @@ nav .menu-container .list-nav .sous-menu li a {
   font-size: clamp(2.5rem, 3.5vw, 4rem);
   margin: 3rem 20rem 0;
 }
-@media (max-width: 45rem) {
+@media screen and (max-width: 45rem) {
   #pricing .section-container h2 {
     margin: 0 5rem;
   }
@@ -842,7 +859,7 @@ nav .menu-container .list-nav .sous-menu li a {
   margin-bottom: -10%;
   height: 20rem;
 }
-@media (max-width: 45rem) {
+@media screen and (max-width: 45rem) {
   #pricing .section-container .photo-deco {
     height: 10rem;
   }
@@ -883,7 +900,7 @@ nav .menu-container .list-nav .sous-menu li a {
   padding: 0 3rem;
   text-align: justify;
 }
-@media (max-width: 45rem) {
+@media screen and (max-width: 45rem) {
   #pricing .section-container .cartes-tarif-container .carte-tarifs p {
     margin: 3rem;
     text-align: center;
@@ -932,7 +949,7 @@ nav .menu-container .list-nav .sous-menu li a {
   display: flex;
   flex-direction: column;
 }
-@media (max-width: 45rem) {
+@media screen and (max-width: 45rem) {
   .quote .section-container .carte-temoignage {
     margin: 0 5rem 5rem;
   }
@@ -971,7 +988,7 @@ nav .menu-container .list-nav .sous-menu li a {
   width: 100%;
   height: 100%;
 }
-@media (max-width: 1228px) {
+@media screen and (max-width: 1228px) {
   #thematiques::before {
     display: none;
   }
@@ -990,7 +1007,7 @@ nav .menu-container .list-nav .sous-menu li a {
   left: 2rem;
   z-index: -1;
 }
-@media (max-width: 76.8rem) {
+@media screen and (max-width: 76.8rem) {
   #thematiques .section-header {
     margin: 7rem 0 0 0;
     position: static;
@@ -1000,7 +1017,7 @@ nav .menu-container .list-nav .sous-menu li a {
   position: relative;
   height: 100rem;
 }
-@media (max-width: 76.8rem) {
+@media screen and (max-width: 76.8rem) {
   #thematiques .section-content {
     display: flex;
     flex-direction: row;
@@ -1009,7 +1026,7 @@ nav .menu-container .list-nav .sous-menu li a {
     height: auto;
   }
 }
-@media (max-width: 1228px) {
+@media screen and (max-width: 1228px) {
   #thematiques .section-content::before {
     content: "";
     background-image: url("../ressources/images/4b6b07a8-483b-492a-a9db-633b0e4dbe6b.png");
@@ -1023,7 +1040,7 @@ nav .menu-container .list-nav .sous-menu li a {
     height: 100%;
   }
 }
-@media (max-width: 640px) {
+@media screen and (max-width: 640px) {
   #thematiques .section-content::before {
     display: none;
   }
@@ -1061,14 +1078,14 @@ nav .menu-container .list-nav .sous-menu li a {
   top: -0.1%;
   z-index: 500;
 }
-@media (max-width: 76.8rem) {
+@media screen and (max-width: 76.8rem) {
   #thematiques .section-content .carte-thematique {
     position: static;
     margin: 3rem 1rem;
     height: auto;
   }
 }
-@media (max-width: 45rem) {
+@media screen and (max-width: 45rem) {
   #thematiques .section-content .carte-thematique {
     flex-grow: 1;
   }
@@ -1244,12 +1261,12 @@ button:hover, .btn:hover {
   width: 50%;
   justify-content: center;
 }
-@media (max-width: 108rem) {
+@media screen and (max-width: 108rem) {
   #contact .contact-container .formulaire_formContainer {
     margin: 5rem;
   }
 }
-@media (max-width: 65rem) {
+@media screen and (max-width: 65rem) {
   #contact .contact-container .formulaire_formContainer {
     width: 85%;
     padding: 3rem;
